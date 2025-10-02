@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app/(public)/landing/components/Pillars.tsx -> gsap/ScrollSmoother\":{\"id\":\"app/(public)/landing/components/Pillars.tsx -> gsap/ScrollSmoother\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_gsap_ScrollSmoother_js.js\"]}}"

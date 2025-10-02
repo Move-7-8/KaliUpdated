@@ -7,7 +7,7 @@ export const Rightbar = () => {
 
     return (
         <div className="drawer drawer-end">
-            <input id="layout-rightbar-drawer" type="checkbox" className="drawer-toggle" />
+            {/* <input id="layout-rightbar-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-side z-[50]">
                 <label
                     htmlFor="layout-rightbar-drawer"
@@ -194,8 +194,8 @@ export const Rightbar = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> */}
+            {/* </div> */}
         </div>
     );
 };
