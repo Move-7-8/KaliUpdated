@@ -1,28 +1,81 @@
-# Kali
+## Upgrading Plan
 
-## Description
+To upgrade your plan, send us your order ID to pouya@daisyui.com.
+We will then provide you with a discount code so you won't have to pay the full price.
 
-Add a brief description of your project here.
+# Nexus - Client & Admin Dashboard
 
-## Installation
+## Package
 
-```bash
-# Add installation instructions here
+Thank you for purchasing Nexus Admin. I hope it's going to be helpful for you.
+Please share your feedback by filling out [the form](https://forms.gle/UeX3jgsjFNFcZsq9A)
+
+### Please refer [online documentation](https://nexus.daisyui.com/docs/) for full details
+
+## How to run
+
+### Using NPM
+
+1. Install dependencies
+
+```
+npm install
 ```
 
-## Usage
+2. Run the dev server
 
-```bash
-# Add usage examples here
+```
+npm run dev
 ```
 
-## Contributing
+3. Or build and preview:
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+```
+npm run build
+npm run start
+```
 
-## License
+### Using Yarn
 
-Add license information here.
+1. Install dependencies
+
+```
+yarn
+```
+
+2. Run the dev server
+
+```
+yarn dev
+```
+
+3. Or build and preview:
+
+```
+yarn build
+yarn start
+```
+
+### Using Bun
+
+1. Install dependencies
+
+```
+bun i
+```
+
+2. Run the dev server
+
+```
+bun run dev
+```
+
+3. Or build and preview:
+
+```
+bun run build
+bun run start
+```
+
+Note: It is compatible with all 3 major package managers (NPM, Yarn & Bun)
+We recommended using bun for faster deps installation

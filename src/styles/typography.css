@@ -1,0 +1,116 @@
+/* /** Importing font files: Google Fonts **/
+/* 1. We no longer need to import DM Sans, so we can remove or comment out this line. */
+/* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;1000&display=swap"); */
+
+/* Self-hosted OCR font (deprecated: no longer used) */
+/* @font-face {
+    font-family: "OCR";
+    src:
+        url("/fonts/OCR.woff2") format("woff2"),
+        url("/fonts/OCR.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+} */
+
+/* Eurostile for headings (and now body, replacing OCR) */
+@font-face {
+    font-family: "Eurostile Heading";
+    src:
+        url("/fonts/EurostileExtended-Roman.woff2") format("woff2"),
+        url("/fonts/EurostileExtended-Roman.woff") format("woff"),
+        url("/fonts/EurostileExtended-Roman.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Eurostile Heading";
+    src:
+        url("/fonts/EurostileBold.woff2") format("woff2"),
+        url("/fonts/EurostileBold.woff") format("woff"),
+        url("/fonts/EurostileBold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Eurostile Heading";
+    src:
+        url("/fonts/Eurostile-Oblique.woff2") format("woff2"),
+        url("/fonts/Eurostile-Oblique.woff") format("woff"),
+        url("/fonts/Eurostile-Oblique.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/** Tailwind v4 tokens **/
+@theme {
+    /* Dedicated heading token (also used for body to replace OCR) */
+    --font-heading:
+        "Eurostile Heading", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    /* (keep your other tokens here) */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+}
+
+/* Apply Eurostile only to headings by default */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    /* optional: tighten tracking a touch for the squared shapes */
+    letter-spacing: 0.01em;
+}
+
+/* Optional utility if you prefer classes instead of global headings */
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+/* --- OCR utilities & overrides (repointed to Eurostile) --- */
+
+/* 2. Utility class to apply "OCR" lookalike: now maps to Eurostile to avoid breaking markup */
+.font-ocr {
+    font-family: var(--font-heading);
+}
+
+/* 3. Stronger override for headings specifically (beats the global h1–h6 rule) */
+h1.font-ocr,
+h2.font-ocr,
+h3.font-ocr,
+h4.font-ocr,
+h5.font-ocr,
+h6.font-ocr {
+    font-family: var(--font-heading);
+}
+
+/** Typography config for tailwindcss **/
+@theme {
+    /* 4. Body font now uses Eurostile (was OCR). */
+    --font-body:
+        "Eurostile Heading", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+}
+
+body {
+    /* This line doesn't need to change! It automatically uses the new --font-body value. */
+    @apply font-body text-base;
+}

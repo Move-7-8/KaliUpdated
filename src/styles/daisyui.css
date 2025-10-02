@@ -1,0 +1,338 @@
+@plugin "daisyui" {
+    themes: y2k;
+
+    exclude: rootscrollgutter;
+}
+
+@plugin "daisyui/theme" {
+    name: "dark";
+    color-scheme: dark;
+    prefersdark: true;
+
+    /* == Layout Colors == */
+    --root-bg: #121416;
+    --layout-sidebar-background: #181c20;
+    --layout-topbar-background: #181b1f;
+
+    /* == Base Colors == */
+    --color-base-100: #181c20;
+    --color-base-200: #22262a;
+    --color-base-300: #2c3034;
+    --color-base-content: #f0f4f8;
+
+    /* == Colors == */
+    --color-primary: #167bff;
+    --color-primary-content: #ffffff;
+    --color-secondary: #9c5de8;
+    --color-secondary-content: #ffffff;
+    --color-accent: #00d3bb;
+    --color-accent-content: #f3fbf6;
+    --color-neutral: #dce1e6;
+    --color-neutral-content: #1e2832;
+    --color-info: #14b4ff;
+    --color-info-content: #ffffff;
+    --color-success: #0bbf58;
+    --color-success-content: #ffffff;
+    --color-warning: #f5a524;
+    --color-warning-content: #150a00;
+    --color-error: #f31260;
+    --color-error-content: #ffffff;
+
+    /* == Sizes == */
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+    --rounded-box: 0.25rem;
+    --radius-selector: 0.25rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --card-p: 20px;
+    --card-fs: var(--text-base);
+
+    /* == Other Options == */
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "light";
+    default: true;
+    color-scheme: light;
+
+    /* == Layout Colors == */
+    --root-bg: #fafbfc;
+    --layout-sidebar-background: #ffffff;
+    --layout-topbar-background: #ffffff;
+
+    /* == Base Colors == */
+    --color-base-100: #ffffff;
+    --color-base-200: #eef0f2;
+    --color-base-300: #dcdee0;
+    --color-base-content: #1e2328;
+
+    /* == Colors == */
+    --color-primary: #167bff;
+    --color-primary-content: #ffffff;
+    --color-secondary: #9c5de8;
+    --color-secondary-content: #ffffff;
+    --color-accent: #00d3bb;
+    --color-accent-content: #f3fbf6;
+    --color-neutral: #1e2832;
+    --color-neutral-content: #fafcff;
+    --color-info: #14b4ff;
+    --color-info-content: #ffffff;
+    --color-success: #0bbf58;
+    --color-success-content: #ffffff;
+    --color-warning: #f5a524;
+    --color-warning-content: #150a00;
+    --color-error: #f31260;
+    --color-error-content: #ffffff;
+
+    /* == Sizes == */
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+    --rounded-box: 0.25rem;
+    --radius-selector: 0.25rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --card-p: 20px;
+    --card-fs: var(--text-base);
+
+    /* == Other Options == */
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "contrast";
+    color-scheme: light;
+
+    /* == Layout Colors == */
+    --root-bg: #f2f4f6;
+    --layout-sidebar-background: #fcfdff;
+    --layout-topbar-background: #fdfeff;
+
+    /* == Base Colors == */
+    --color-base-100: #ffffff;
+    --color-base-200: #eef0f2;
+    --color-base-300: #dcdee0;
+    --color-base-content: #1e2328;
+
+    /* == Colors == */
+    --color-primary: #167bff;
+    --color-primary-content: #ffffff;
+    --color-secondary: #9c5de8;
+    --color-secondary-content: #ffffff;
+    --color-accent: #00d3bb;
+    --color-accent-content: #f3fbf6;
+    --color-neutral: #1e2832;
+    --color-neutral-content: #fafcff;
+    --color-info: #14b4ff;
+    --color-info-content: #ffffff;
+    --color-success: #0bbf58;
+    --color-success-content: #ffffff;
+    --color-warning: #f5a524;
+    --color-warning-content: #150a00;
+    --color-error: #f31260;
+    --color-error-content: #ffffff;
+
+    /* == Sizes == */
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+    --rounded-box: 0.25rem;
+    --radius-selector: 0.25rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --card-p: 20px;
+    --card-fs: var(--text-base);
+
+    /* == Other Options == */
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "material";
+    color-scheme: light;
+
+    /* == Layout Colors == */
+    --root-bg: #fdfeff;
+    --layout-sidebar-background: #f5f7ff;
+    --layout-topbar-background: #f5f7ff;
+
+    /* == Base Colors == */
+    --color-base-100: #f6f8ff;
+    --color-base-200: #eaecfa;
+    --color-base-300: #e0e2f8;
+    --color-base-content: #191e28;
+
+    /* == Colors == */
+    --color-primary: #167bff;
+    --color-primary-content: #ffffff;
+    --color-secondary: #9c5de8;
+    --color-secondary-content: #ffffff;
+    --color-accent: #00d3bb;
+    --color-accent-content: #f3fbf6;
+    --color-neutral: #1e2832;
+    --color-neutral-content: #fafcff;
+    --color-info: #14b4ff;
+    --color-info-content: #ffffff;
+    --color-success: #0bbf58;
+    --color-success-content: #ffffff;
+    --color-warning: #f5a524;
+    --color-warning-content: #150a00;
+    --color-error: #f31260;
+    --color-error-content: #ffffff;
+
+    /* == Sizes == */
+    --radius-field: 20px;
+    --radius-box: 20px;
+    --rounded-box: 20px;
+    --radius-selector: 20px;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --card-p: 20px;
+
+    /* == Other Options == */
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "dim";
+    color-scheme: dark;
+
+    /* == Layout Colors == */
+    --root-bg: #222630;
+    --layout-sidebar-background: #2a2e38;
+    --layout-topbar-background: #2a2e38;
+
+    /* == Base Colors == */
+    --color-base-100: #2a2e38;
+    --color-base-200: #343842;
+    --color-base-300: #3c404a;
+    --color-base-content: #f0f4f8;
+
+    /* == Colors == */
+    --color-primary: #167bff;
+    --color-primary-content: #ffffff;
+    --color-secondary: #9c5de8;
+    --color-secondary-content: #ffffff;
+    --color-accent: #00d3bb;
+    --color-accent-content: #f3fbf6;
+    --color-neutral: #dce1e6;
+    --color-neutral-content: #1e2832;
+    --color-info: #14b4ff;
+    --color-info-content: #ffffff;
+    --color-success: #0bbf58;
+    --color-success-content: #ffffff;
+    --color-warning: #f5a524;
+    --color-warning-content: #150a00;
+    --color-error: #f31260;
+    --color-error-content: #ffffff;
+
+    /* == Sizes == */
+    --radius-field: 0.25rem;
+    --radius-box: 0.25rem;
+    --rounded-box: 0.25rem;
+    --radius-selector: 0.25rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --card-p: 20px;
+    --card-fs: var(--text-base);
+
+    /* == Other Options == */
+    --depth: 0;
+    --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+    name: "material-dark";
+    color-scheme: dark;
+
+    /* == Layout Colors == */
+    --root-bg: #141618;
+    --layout-sidebar-background: #181c20;
+    --layout-topbar-background: #181c22;
+
+    /* == Base Colors == */
+    --color-base-100: #181e24;
+    --color-base-200: #202830;
+    --color-base-300: #2c323a;
+    --color-base-content: #f0f4f8;
+
+    /* == Colors == */
+    --color-primary: #167bff;
+    --color-primary-content: #ffffff;
+    --color-secondary: #9c5de8;
+    --color-secondary-content: #ffffff;
+    --color-accent: #00d3bb;
+    --color-accent-content: #f3fbf6;
+    --color-neutral: #dce1e6;
+    --color-neutral-content: #1e2832;
+    --color-info: #14b4ff;
+    --color-info-content: #ffffff;
+    --color-success: #0bbf58;
+    --color-success-content: #ffffff;
+    --color-warning: #f5a524;
+    --color-warning-content: #150a00;
+    --color-error: #f31260;
+    --color-error-content: #ffffff;
+
+    /* == Sizes == */
+    --radius-field: 20px;
+    --radius-box: 20px;
+    --rounded-box: 20px;
+    --radius-selector: 20px;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --card-p: 20px;
+
+    /* == Other Options == */
+    --depth: 0;
+    --noise: 0;
+}
+
+/* ▼▼▼ YOUR NEW THEME DEFINITION (Y2K) ▼▼▼ */
+@plugin "daisyui/theme" {
+    name: "y2k"; /* Renamed for testing */
+
+    /* --- Core Colors: All Blue, All The Time --- */
+    --color-primary: #f1f1f1; /* A vibrant, pure blue for main actions */
+    --color-primary-content: #000000; /* Black text on primary buttons */
+    --color-secondary: #3b82f6; /* A lighter, "sky" blue for secondary actions */
+    --color-secondary-content: #ffffff; /* White text on secondary buttons */
+    --color-accent: #0ea5e9; /* A bright cyan/aqua for highlights */
+    --color-accent-content: #0c2f47; /* Dark blue text for the accent color */
+
+    /* --- Base & Background Colors --- */
+    --color-base-100: #f0f8ff; /* "AliceBlue", a very light blue page background */
+    --color-base-200: #dbeafe; /* A slightly darker light blue for hover */
+    --color-base-300: #bfdbfe; /* An even darker light blue for active states */
+    --color-base-content: #020617; /* A very dark, near-black navy for all default text */
+
+    /* --- Status Colors (also blue!) --- */
+    --color-info: #2563eb; /* Your standard info blue */
+    --color-info-content: #ffffff;
+    --color-success: #0d9488; /* A deep teal, which is a greenish-blue */
+    --color-success-content: #ffffff;
+    --color-error: #4f46e5; /* A deep indigo/violet blue for errors */
+    --color-error-content: #ffffff;
+    --color-warning: #60a5fa; /* A washed-out, lighter blue for warnings */
+    --color-warning-content: #020617; /* Dark text for readability */
+
+    /* --- Core Y2K Aesthetic Changes (Kept from your previous theme) --- */
+    --radius-box: 0rem;
+    --radius-btn: 0.125rem;
+    --border: 2px;
+    --depth: 0;
+    --shadow-color: #000000;
+    --shadow-strength: 0%;
+    --btn-text-case: none;
+    --btn-focus-scale: 1;
+}
