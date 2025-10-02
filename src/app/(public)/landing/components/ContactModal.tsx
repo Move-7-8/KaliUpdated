@@ -443,11 +443,11 @@ export default function ContactModal({
                             initial="hidden"
                             animate={isOpen ? "visible" : "hidden"}>
                             <motion.header variants={itemV} className="space-y-2">
-                                <h2 className="text-2xl font-semibold">Thanks—you're in.</h2>
-                                <p className="text-base-content/70 text-base">
-                                    We’ll reply within <strong>1 business day</strong>
-                                    {/* {success.ticketId ? <>. Your reference: <code>{success.ticketId}</code>.</> : "."} */}
-                                </p>
+                                <h2 className="text-2xl font-semibold">Thanks, we'll get back to you soon.</h2>
+                                {/* <p className="text-base-content/70 text-base">
+                                    We’ll reply within <strong>1 business day</strong> */}
+                                {/* {success.ticketId ? <>. Your reference: <code>{success.ticketId}</code>.</> : "."} */}
+                                {/* </p> */}
                             </motion.header>
 
                             <motion.div variants={itemV} className="flex items-center gap-3">
