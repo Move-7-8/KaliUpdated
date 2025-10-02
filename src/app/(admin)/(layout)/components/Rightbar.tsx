@@ -7,7 +7,7 @@ export const Rightbar = () => {
 
     return (
         <div className="drawer drawer-end">
-            {/* <input id="layout-rightbar-drawer" type="checkbox" className="drawer-toggle" />
+            <input id="layout-rightbar-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-side z-[50]">
                 <label
                     htmlFor="layout-rightbar-drawer"
@@ -48,7 +48,7 @@ export const Rightbar = () => {
                             <div
                                 data-theme="light"
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("light")}>
+                                onClick={() => console.log("light")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -63,7 +63,7 @@ export const Rightbar = () => {
                             <div
                                 data-theme="contrast"
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("contrast")}>
+                                onClick={() => console.log("contrast")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -78,7 +78,7 @@ export const Rightbar = () => {
                             <div
                                 data-theme="material"
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("material")}>
+                                onClick={() => console.log("material")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -94,7 +94,7 @@ export const Rightbar = () => {
                             <div
                                 data-theme="dark"
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("dark")}>
+                                onClick={() => console.log("dark")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -110,7 +110,7 @@ export const Rightbar = () => {
                             <div
                                 data-theme="dim"
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("dim")}>
+                                onClick={() => console.log("dim")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -126,7 +126,7 @@ export const Rightbar = () => {
                             <div
                                 data-theme="material-dark"
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("material-dark")}>
+                                onClick={() => console.log("material-dark")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -141,7 +141,7 @@ export const Rightbar = () => {
 
                             <div
                                 className="rounded-box group relative cursor-pointer"
-                                onClick={() => changeTheme("system")}>
+                                onClick={() => console.log("system")}>
                                 <div className="bg-base-200 rounded-box pt-5 pb-3 text-center">
                                     <div className="flex items-center justify-center gap-1">
                                         <span className="rounded-box bg-primary h-6 w-2 sm:w-3"></span>
@@ -164,13 +164,13 @@ export const Rightbar = () => {
                             <div className="mt-3 grid grid-cols-2 gap-3">
                                 <div
                                     className="border-base-300 hover:bg-base-200 rounded-box group-data-[sidebar-theme=light]/html:bg-base-200 inline-flex cursor-pointer items-center justify-center gap-2 border p-2"
-                                    onClick={() => changeSidebarTheme("light")}>
+                                    onClick={() => console.log("light")}>
                                     <span className="iconify lucide--sun size-4.5" />
                                     Light
                                 </div>
                                 <div
                                     className="border-base-300 hover:bg-base-200 rounded-box group-data-[sidebar-theme=dark]/html:bg-base-200 inline-flex cursor-pointer items-center justify-center gap-2 border p-2"
-                                    onClick={() => changeSidebarTheme("dark")}>
+                                    onClick={() => console.log("dark")}>
                                     <span className="iconify lucide--moon size-4.5" />
                                     Dark
                                 </div>
@@ -180,22 +180,22 @@ export const Rightbar = () => {
                         <div className="mt-3 grid grid-cols-2 gap-3">
                             <div
                                 className="border-base-300 hover:bg-base-200 rounded-box group-[[dir=ltr]]/html:bg-base-200 group-[:not([dir])]/html:bg-base-200 inline-flex cursor-pointer items-center justify-center gap-2 border p-2"
-                                onClick={() => changeDirection("ltr")}>
+                                onClick={() => console.log("ltr")}>
                                 <span className="iconify lucide--pilcrow-left size-4.5" />
                                 <span className="hidden sm:inline">Left to Right</span>
                                 <span className="inline sm:hidden">LTR</span>
                             </div>
                             <div
                                 className="border-base-300 hover:bg-base-200 rounded-box group-[[dir=rtl]]/html:bg-base-200 inline-flex cursor-pointer items-center justify-center gap-2 border p-2"
-                                onClick={() => changeDirection("rtl")}>
+                                onClick={() => console.log("rtl")}>
                                 <span className="iconify lucide--pilcrow-right size-4.5" />
                                 <span className="hidden sm:inline">Right to Right</span>
                                 <span className="inline sm:hidden">RTL</span>
                             </div>
                         </div>
                     </div>
-                </div> */}
-            {/* </div> */}
+                </div>
+            </div>
         </div>
     );
 };
