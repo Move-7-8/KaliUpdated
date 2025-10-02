@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { type ReactNode } from "react";
 
 import { Footer } from "./(layout)/components/Footer";
@@ -5,6 +6,10 @@ import { Rightbar } from "./(layout)/components/Rightbar";
 import { Sidebar } from "./(layout)/components/Sidebar";
 import { Topbar } from "./(layout)/components/Topbar";
 import { adminMenuItems } from "./(layout)/helpers";
+
+export const metadata: Metadata = {
+    robots: { index: false, follow: false },
+};
 
 const Layout = ({ children }: { children: ReactNode }) => {
     return (
