@@ -61,11 +61,7 @@ export const Sidebar = ({ menuItems }: { menuItems: ISidebarMenuItem[] }) => {
                 aria-label="Toggle layout sidebar"
             />
 
-            <div
-                id="layout-sidebar"
-                data-theme={
-                    config.sidebarTheme == "dark" && ["light", "contrast"].includes(config.theme) ? "dark" : undefined
-                }>
+            <div id="layout-sidebar">
                 <Link href="/dashboards/ecommerce" className="flex min-h-16 items-center justify-center">
                     <Logo />
                 </Link>
