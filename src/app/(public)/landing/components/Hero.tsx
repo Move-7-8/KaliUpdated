@@ -9,6 +9,8 @@ import { useCallback, useEffect, useRef } from "react";
 
 // src/app/landing/components/Hero.tsx
 
+// src/app/landing/components/Hero.tsx
+
 export const Hero = () => {
     const root = useRef<HTMLDivElement | null>(null);
     const vidRef = useRef<HTMLVideoElement | null>(null);
@@ -20,7 +22,7 @@ export const Hero = () => {
             new CustomEvent("open-contact", {
                 detail: {
                     initial: {
-                        message: "Homepage — I’d like a free 15-min consult. Context: (goals, tools, timeline)",
+                        message: "",
                     },
                 },
             }),

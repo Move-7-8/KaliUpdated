@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "@gsap/react": "^2.1.2",
+        "@vercel/analytics": "^1.5.0",
         "apexcharts": "^4.7.0",
         "cally": "^0.8.0",
         "filepond": "^4.32.7",

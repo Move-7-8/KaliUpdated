@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import { type Metadata } from "next";
 import { type ReactNode } from "react";
 
@@ -126,6 +127,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
                 {/* Global singleton ContactModal (no built-in trigger) */}
                 <ContactModal id="contact-modal" renderTrigger={false} />
+
+                {/* Vercel Analytics */}
+                <Analytics />
             </body>
         </html>
     );
