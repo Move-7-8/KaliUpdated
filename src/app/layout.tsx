@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
     description:
         "Kali Software builds workflow automation, AI integrations, and custom web apps for Australian businesses. Faster processes, fewer errors, and measurable ROI.",
-    metadataBase: new URL("https://www.kalicapital.io"),
+    metadataBase: new URL("https://www.kalisoftware.io"),
     keywords: [
         "software development",
         "workflow automation",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: "website",
         locale: "en_AU",
-        url: "https://www.kalicapital.io/",
+        url: "https://www.kalisoftware.io/",
         siteName: "Kali Software",
         title: "Software & Automation Services for Australian Businesses | Kali Software",
         description:
@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang="en-AU" suppressHydrationWarning className="group/html">
             <head>
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 {/* eslint-disable-next-line @next/next/no-sync-scripts */}
                 <script type="text/javascript" src="/js/prefetch-config.js"></script>
@@ -113,8 +113,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                             "@context": "https://schema.org",
                             "@type": "Organization",
                             name: "Kali Software",
-                            url: "https://www.kalicapital.io/",
-                            logo: "https://www.kalicapital.io/images/og/kali-software-og.png",
+                            url: "https://www.kalisoftware.io/",
+                            logo: "https://www.kalisoftware.io/images/og/kali-software-og.png",
                         }),
                     }}
                 />
