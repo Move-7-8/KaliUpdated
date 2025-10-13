@@ -16,7 +16,7 @@ import { Testimonial } from "./landing/components/Testimonial";
 import { Topbar } from "./landing/components/Topbar";
 
 export const metadata: Metadata = {
-    title: "Landing - Product Preview",
+    title: "Software & Automation Services",
 };
 
 const LandingPage = () => {
@@ -32,13 +32,7 @@ const LandingPage = () => {
                     <Pillars />
                     <div className="mt-60">
                         <Results />
-                        {/* <Features /> */}
-                        {/* <Showcase />
-                        <AuditReport />
-                        <Testimonial />
-                        <CTA /> */}
                         <FAQ />
-                        {/* <BundleOffer /> */}
                         <Footer />
                     </div>
                 </div>

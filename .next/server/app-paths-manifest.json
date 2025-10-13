@@ -1,6 +1,8 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/(public)/page": "app/(public)/page.js",
+  "/(public)/services/Hubspot-Xero-Integration/page": "app/(public)/services/Hubspot-Xero-Integration/page.js",
+  "/(public)/blog/[slug]/page": "app/(public)/blog/[slug]/page.js",
   "/(public)/services/page": "app/(public)/services/page.js",
-  "/(public)/about/page": "app/(public)/about/page.js"
+  "/(public)/blog/page": "app/(public)/blog/page.js"
 }

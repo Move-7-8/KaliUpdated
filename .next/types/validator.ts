@@ -47,10 +47,613 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 }
 
 
+// Validate ../../src/app/(admin)/apps/chat/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/chat">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/chat/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/customers/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/customers/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/customers/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/customers/create/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/customers/create">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/customers/create/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/customers/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/customers">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/customers/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/orders/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/orders/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/orders/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/orders/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/orders">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/orders/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/products/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/products/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/products/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/products/create/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/products/create">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/products/create/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/products/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/products">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/products/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/sellers/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/sellers/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/sellers/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/sellers/create/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/sellers/create">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/sellers/create/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/sellers/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/sellers">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/sellers/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/shops/[id]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/shops/[id]">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/shops/[id]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/shops/create/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/shops/create">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/shops/create/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/ecommerce/shops/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/ecommerce/shops">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/ecommerce/shops/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/file-manager/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/file-manager">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/file-manager/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/gen-ai/content/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/gen-ai/content">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/gen-ai/content/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/gen-ai/home/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/gen-ai/home">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/gen-ai/home/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/gen-ai/image/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/gen-ai/image">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/gen-ai/image/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/apps/gen-ai/library/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/apps/gen-ai/library">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/apps/gen-ai/library/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/dashboards/crm/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboards/crm">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/dashboards/crm/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/dashboards/ecommerce/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboards/ecommerce">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/dashboards/ecommerce/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/dashboards/gen-ai/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/dashboards/gen-ai">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/dashboards/gen-ai/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/pages/get-help/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/pages/get-help">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/pages/get-help/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/pages/settings/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/pages/settings">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/pages/settings/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/pages/starter/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/pages/starter">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/pages/starter/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/charts/apex/area/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/charts/apex/area">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/charts/apex/area/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/charts/apex/bar/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/charts/apex/bar">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/charts/apex/bar/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/charts/apex/column/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/charts/apex/column">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/charts/apex/column/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/charts/apex/line/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/charts/apex/line">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/charts/apex/line/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/charts/apex/pie/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/charts/apex/pie">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/charts/apex/pie/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/accordion/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/accordion">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/accordion/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/alert/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/alert">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/alert/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/avatar/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/avatar">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/avatar/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/badge/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/badge">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/badge/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/breadcrumb/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/breadcrumb">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/breadcrumb/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/button/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/button">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/button/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/calendar/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/calendar">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/calendar/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/countdown/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/countdown">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/countdown/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/drawer/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/drawer">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/drawer/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/dropdown/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/dropdown">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/dropdown/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/indicator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/indicator">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/indicator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/loading/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/loading">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/loading/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/menu/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/menu">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/menu/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/modal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/modal">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/modal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/pagination/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/pagination">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/pagination/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/progress/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/progress">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/progress/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/step/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/step">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/step/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/tab/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/tab">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/tab/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/table/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/table">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/table/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/timeline/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/timeline">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/timeline/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/toast/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/toast">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/toast/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/components/tooltip/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/components/tooltip">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/components/tooltip/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/checkbox/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/checkbox">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/checkbox/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/fieldset/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/fieldset">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/fieldset/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/file-input/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/file-input">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/file-input/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/input/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/input">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/input/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/label/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/label">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/label/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/radio/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/radio">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/radio/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/range/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/range">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/range/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/rating/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/rating">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/rating/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/select/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/select">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/select/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/textarea/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/textarea">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/textarea/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/toggle/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/toggle">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/toggle/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(admin)/ui/forms/validator/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/ui/forms/validator">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/ui/forms/validator/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 // Validate ../../src/app/(public)/about/page.tsx
 {
   type __IsExpected<Specific extends AppPageConfig<"/about">> = Specific
   const handler = {} as typeof import("../../src/app/(public)/about/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(public)/blog/[slug]/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/blog/[slug]">> = Specific
+  const handler = {} as typeof import("../../src/app/(public)/blog/[slug]/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(public)/blog/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/blog">> = Specific
+  const handler = {} as typeof import("../../src/app/(public)/blog/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -69,6 +672,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 {
   type __IsExpected<Specific extends AppPageConfig<"/privacypolicy">> = Specific
   const handler = {} as typeof import("../../src/app/(public)/privacypolicy/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../src/app/(public)/services/Hubspot-Xero-Integration/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/Hubspot-Xero-Integration">> = Specific
+  const handler = {} as typeof import("../../src/app/(public)/services/Hubspot-Xero-Integration/page.js")
   type __Check = __IsExpected<typeof handler>
   // @ts-ignore
   type __Unused = __Check
@@ -131,6 +743,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
 
 
 
+
+// Validate ../../src/app/(admin)/layout.tsx
+{
+  type __IsExpected<Specific extends LayoutConfig<"/">> = Specific
+  const handler = {} as typeof import("../../src/app/(admin)/layout.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
 
 // Validate ../../src/app/(public)/layout.tsx
 {

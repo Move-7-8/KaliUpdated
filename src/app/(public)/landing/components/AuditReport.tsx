@@ -7,6 +7,8 @@ import React from "react";
 
 // src/app/landing/components/AuditGlassGlow.tsx
 
+// src/app/landing/components/AuditGlassGlow.tsx
+
 type KPI = { label: string; value: string; helper?: string };
 type Opportunity = {
     title: string;

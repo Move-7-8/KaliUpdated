@@ -308,8 +308,9 @@ export default function Services() {
                                     className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-12">
                                     <div className="lg:col-span-8">
                                         <p className="text-base opacity-90 md:text-lg">
-                                            Our service covers building, ongoing optimisation and maintenance of
-                                            workflow automations whatever platforms your workflows are built on.
+                                            Our automation and integration services covers building, ongoing
+                                            optimisation and maintenance of your workflows whatever platforms they're
+                                            are built on.
                                         </p>
 
                                         <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -339,6 +340,14 @@ export default function Services() {
                                                 }
                                                 className="btn btn-secondary cursor-pointer border-2 border-black font-semibold">
                                                 Contact us
+                                            </button>
+                                            <button
+                                                type="button"
+                                                onClick={() =>
+                                                    (window.location.href = "/services/Hubspot-Xero-Integration")
+                                                }
+                                                className="btn btn-ghost cursor-pointer border-2 border-black font-semibold">
+                                                Hubspot ↔ Xero Integration
                                             </button>
                                         </div>
                                     </div>

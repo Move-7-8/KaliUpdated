@@ -48,6 +48,9 @@ export const Topbar = () => {
         window.dispatchEvent(new CustomEvent("open-contact", { detail }));
     }, []);
 
+    // Desktop Services hover state
+    const [servicesOpen, setServicesOpen] = useState(false);
+
     return (
         <>
             <div
@@ -78,9 +81,32 @@ export const Topbar = () => {
                                         {/* <li>
                                             <Link href="/industries">Industries</Link>
                                         </li> */}
+                                        {/* Mobile Services with submenu */}
                                         <li>
-                                            <Link href="/services">Services</Link>
+                                            <details>
+                                                <summary>Services</summary>
+                                                <ul>
+                                                    <li>
+                                                        <Link
+                                                            href="/services"
+                                                            className="hover:bg-base-200 rounded-md px-3 py-2 whitespace-nowrap">
+                                                            All services
+                                                        </Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link
+                                                            href="/services/Hubspot-Xero-Integration"
+                                                            className="hover:bg-base-200 rounded-md px-3 py-2 whitespace-nowrap">
+                                                            HubSpot ↔ Xero Integration
+                                                        </Link>
+                                                    </li>
+                                                </ul>
+                                            </details>
                                         </li>
+                                        <li>
+                                            <Link href="/blog">Insights</Link>
+                                        </li>
+
                                         {/* <li>
                                             <Link href="/insights">Insights</Link>
                                         </li>
@@ -143,9 +169,61 @@ export const Topbar = () => {
                         <Link href="/about" className="btn btn-ghost btn-sm">
                             About
                         </Link>
-                        <Link href="/services" className="btn btn-ghost btn-sm">
-                            Services
+
+                        {/* Desktop Services with hover-controlled dropdown (stays open while hovering trigger or panel) */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setServicesOpen(true)}
+                            onMouseLeave={() => setServicesOpen(false)}>
+                            {/* Clicking the label goes to /services (best practice) */}
+                            <Link
+                                href="/services"
+                                aria-haspopup="menu"
+                                aria-expanded={servicesOpen}
+                                className="btn btn-ghost btn-sm inline-flex items-center">
+                                Services
+                                <span className="iconify lucide--chevron-down ml-1 size-4" />
+                            </Link>
+
+                            <div
+                                className={[
+                                    "rounded-box bg-base-100 absolute right-0 mt-2 min-w-max border border-black/10 p-2 shadow transition",
+                                    servicesOpen ? "visible scale-100 opacity-100" : "invisible scale-95 opacity-0",
+                                ].join(" ")}
+                                role="menu">
+                                <ul className="menu">
+                                    {/* Pinned All services at the top — styled same as other links */}
+                                    <li>
+                                        <Link
+                                            href="/services"
+                                            className="hover:bg-base-200 rounded-md px-3 py-2 whitespace-nowrap">
+                                            All services
+                                        </Link>
+                                    </li>
+
+                                    {/* Featured label — visually distinct */}
+                                    <li className="py-1 text-right">
+                                        <span className="text-base-content/60 cursor-default text-xs tracking-wide uppercase select-none">
+                                            Featured
+                                        </span>
+                                    </li>
+
+                                    {/* Featured item(s) — styled same as other links */}
+                                    <li>
+                                        <Link
+                                            className="hover:bg-base-200 rounded-md px-3 py-2 whitespace-nowrap"
+                                            href="/services/Hubspot-Xero-Integration">
+                                            HubSpot ↔ Xero Integration
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <Link href="/blog" className="btn btn-ghost btn-sm">
+                            Insights
                         </Link>
+
                         {/* Contact button triggers the global modal */}
                         <button
                             type="button"

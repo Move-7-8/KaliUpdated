@@ -1,6 +1,6 @@
 /*** Tailwind CSS Presets ***/
 @import "tailwindcss";
-
+@import "./blog-prose.css";
 /** Dark Variant with theme & system mode **/
 @variant dark {
     &:where([data-theme="dark"] *, [data-theme="dim"] *, [data-theme="material-dark"] *) {

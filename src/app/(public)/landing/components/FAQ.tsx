@@ -132,8 +132,8 @@ export const FAQ = () => {
                     {/* <div className="inline-flex items-center rounded border border-purple-500/10 bg-purple-500/5 p-2">
                         <span className="iconify lucide--messages-square size-5 text-purple-600" />
                     </div> */}
-                    <h2 className="mb-6 text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
-                    <p className="text-base-content/70 mt-3 inline-block max-w-lg font-sans">
+                    <h2 className="mb-2 text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+                    <p className="text-base-content/70 inline-block max-w-lg font-sans">
                         Questions our clients commonly ask about automation, data, and custom web applications.
                     </p>
                 </div>

@@ -2,6 +2,9 @@
 /* 1. We no longer need to import DM Sans, so we can remove or comment out this line. */
 /* @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;1000&display=swap"); */
 
+/* Blog text font: IBM Plex Sans (readable, modern tech vibe) */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300..700;1,300..700&display=swap");
+
 /* Self-hosted OCR font (deprecated: no longer used) */
 /* @font-face {
     font-family: "OCR";
@@ -103,6 +106,11 @@ h6.font-ocr {
         "Eurostile Heading", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial,
         "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+    /* Blog body font token */
+    --font-blog:
+        "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial,
+        "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
     --text-xs: 12px;
     --text-sm: 14px;
     --text-base: 16px;
@@ -113,4 +121,34 @@ h6.font-ocr {
 body {
     /* This line doesn't need to change! It automatically uses the new --font-body value. */
     @apply font-body text-base;
+}
+
+/* --- Blog utilities --- */
+
+/* Use directly on elements when you want IBM Plex Sans */
+.font-blog {
+    font-family: var(--font-blog);
+}
+
+/* Drop this on your blog wrapper (e.g., <article class="blog">...</article>) */
+.blog,
+.prose-blog {
+    font-family: var(--font-blog);
+    @apply text-[17px] leading-[1.7] md:text-[18px];
+}
+
+/* Keep headings in Eurostile inside blog content */
+.blog h1,
+.blog h2,
+.blog h3,
+.blog h4,
+.blog h5,
+.blog h6,
+.prose-blog h1,
+.prose-blog h2,
+.prose-blog h3,
+.prose-blog h4,
+.prose-blog h5,
+.prose-blog h6 {
+    font-family: var(--font-heading);
 }
