@@ -236,7 +236,7 @@ export default async function BlogPostPage({ params }: Params) {
                             data-open-contact
                             data-message={defaultMessage}
                             className="btn btn-secondary border-2 border-black font-semibold">
-                            Integrate HubSpot and Xero
+                            Get in touch
                         </button>
                     </div>
                 </section>

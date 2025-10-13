@@ -35,7 +35,8 @@ export default function ContactModal({
     const [name, setName] = useState(initial?.name ?? "");
     const [email, setEmail] = useState(initial?.email ?? "");
     const [company, setCompany] = useState(initial?.company ?? "");
-    const [message, setMessage] = useState(initial?.message ?? "");
+    // Never seed message from outside; always start empty.
+    const [message, setMessage] = useState("");
     const [marketingOptIn, setMarketingOptIn] = useState(false);
 
     // Honeypot field (should remain empty).
@@ -188,7 +189,11 @@ export default function ContactModal({
     };
 
     // Imperative open/close
-    const open = useCallback(() => setIsOpen(true), []);
+    const open = useCallback(() => {
+        // Always clear message on open to avoid any external prefill.
+        setMessage("");
+        setIsOpen(true);
+    }, []);
     const close = useCallback(() => {
         const d = dialogRef.current;
         setIsOpen(false);
@@ -208,7 +213,8 @@ export default function ContactModal({
                 if (typeof detail.initial.name === "string") setName(detail.initial.name);
                 if (typeof detail.initial.email === "string") setEmail(detail.initial.email);
                 if (typeof detail.initial.company === "string") setCompany(detail.initial.company);
-                if (typeof detail.initial.message === "string") setMessage(detail.initial.message);
+                // Intentionally ignore any external .message to keep the field empty.
+                setMessage(""); // ensure blank
             }
             open();
         };
@@ -280,7 +286,7 @@ export default function ContactModal({
                             initial="hidden"
                             animate={isOpen ? "visible" : "hidden"}>
                             <motion.header variants={itemV} className="space-y-2">
-                                <h2 className="text-2xl font-semibold">Get a 15-minute consult</h2>
+                                <h2 className="text-2xl font-semibold">Get in touch</h2>
                                 <p className="text-base-content/70 text-base">
                                     Tell us what you’re trying to build or improve—{" "}
                                     <strong>we’ll reply within 1 business day.</strong>

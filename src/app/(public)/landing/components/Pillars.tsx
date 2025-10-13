@@ -33,6 +33,10 @@ import PillarCard from "./PillarCard";
 
 // src/app/landing/components/Pillars.tsx
 
+// src/app/landing/components/Pillars.tsx
+
+// src/app/landing/components/Pillars.tsx
+
 gsap.registerPlugin(ScrollTrigger);
 
 // Anti-bounce defaults: reduce mobile resize ripple + pre-position pins.
@@ -127,7 +131,7 @@ const DEFAULT_ITEMS: Pillar[] = [
         primaryLabel: "Contact Us",
         primaryUsesContactModal: true,
         secondaryLabel: "Case study",
-        secondaryHref: "/services#automation",
+        secondaryHref: "blog/hubspot-xero-australia-how-to",
     },
     {
         label: "Product Development",

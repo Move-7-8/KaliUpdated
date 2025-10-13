@@ -1,4 +1,4 @@
-// src/app/services/hubspot/xeroIntegration/page.tsx
+// src/app/services/hubspot-xero-integration/page.tsx
 import type { Metadata } from "next";
 import Script from "next/script";
 
@@ -6,17 +6,57 @@ import { Footer } from "../../landing/components/Footer";
 import { Topbar } from "../../landing/components/Topbar";
 import XeroIntegration from "./components/XeroIntegration";
 
+const SITE_URL = "https://www.kalisoftware.io";
+const SERVICE_PATH = "/services/hubspot-xero-integration";
+const SERVICE_URL = `${SITE_URL}${SERVICE_PATH}`;
+const ORG_ID = `${SITE_URL}/#organization`;
+
+// Use a 1200×630 image. Place this file in your repo and update the path if needed.
+const OG_IMAGE = `${SITE_URL}/images/og/image.png`;
+
 export const metadata: Metadata = {
+    // Ensures relative URLs (e.g., in images) resolve correctly.
+    metadataBase: new URL(SITE_URL),
+
     title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
     description:
         "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
     alternates: {
-        canonical: "https://www.kalisoftware.io/services/hubspot-xero-integration",
+        canonical: SERVICE_URL,
+    },
+
+    // --- Open Graph (Facebook/LinkedIn/Slack/etc.)
+    openGraph: {
+        title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+        description:
+            "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+        url: SERVICE_URL,
+        siteName: "Kali Software",
+        locale: "en_AU",
+        type: "website",
+        images: [
+            {
+                url: OG_IMAGE, // absolute URL recommended
+                width: 1200,
+                height: 630,
+                alt: "HubSpot ↔ Xero Integration for Australian SMEs",
+                type: "image/png",
+            },
+        ],
+    },
+
+    // --- Twitter cards
+    twitter: {
+        card: "summary_large_image",
+        title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+        description:
+            "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+        // If you have a Twitter handle, you can add:
+        // site: "@yourhandle",
+        // creator: "@yourhandle",
+        images: [OG_IMAGE], // can be absolute or relative when metadataBase is set
     },
 };
-
-const ORG_ID = "https://www.kalisoftware.io/#organization";
-const SERVICE_URL = "https://www.kalisoftware.io/services/hubspot-xero-integration";
 
 const serviceLd = {
     "@context": "https://schema.org",

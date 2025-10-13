@@ -1,6 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback } from "react";
+
+// ✅ Internal link to the blog (SEO-friendly)
 
 export default function XeroIntegration() {
     const openContact = useCallback((detail?: Record<string, unknown>) => {
@@ -58,6 +61,18 @@ export default function XeroIntegration() {
                 className="btn btn-outline bg-primary-content text-primary border-2 border-black">
                 Talk to a consultant
               </button> */}
+                        </div>
+
+                        {/* ✅ SEO-friendly internal link to the detailed blog guide */}
+                        <div className="mt-3">
+                            <Link
+                                href="/blog/hubspot-xero-australia-how-to"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="link link-hover underline-offset-4">
+                                Read the full guide:{" "}
+                                <span className="whitespace-nowrap">How to Connect HubSpot and Xero (properly)</span>
+                            </Link>
                         </div>
                     </div>
                 </header>

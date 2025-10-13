@@ -29,7 +29,7 @@ export default function Post() {
                 <br />
                 <br />
                 We&apos;ll run through the benefits and pitfalls of each option then talk about the high level concepts
-                behind a bespoke integration.
+                behind a bespoke integration. Specifically for, but not limited to Australian businesses.
             </blockquote>
             <p>
                 If you have any questions, feel free to ask in the contact box and we&apos;ll get back to you with an
@@ -323,12 +323,12 @@ export default function Post() {
 
             {/* FINAL CTA */}
             <div className="flex flex-wrap gap-3">
-                <Link
-                    href="/services/hubspot-xero-integration#free-audit"
+                {/* <Link
+                    href="/services/Hubspot-Xero-Integration#free-audit"
                     className="btn btn-secondary border-2 border-black">
                     Free integration audit
-                </Link>
-                <Link href="/services/hubspot-xero-integration" className="btn btn-outline border-2 border-black">
+                </Link> */}
+                <Link href="/services/Hubspot-Xero-Integration" className="btn btn-outline border-2 border-black">
                     HubSpot ↔ Xero service page
                 </Link>
             </div>
