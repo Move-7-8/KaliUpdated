@@ -11,6 +11,16 @@ package-lock.json
 dist/
 build/
 out/
+.next/
+.vercel/
+
+# Next.js / tooling caches
+.next/cache/
+.next/static/
+.next/server/
+.turbo/
+.pnpm-store/
+.cache/
 
 # IDE and editor files
 .idea/
