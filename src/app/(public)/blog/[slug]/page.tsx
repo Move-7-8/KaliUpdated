@@ -14,7 +14,9 @@ import { getAllPostSlugs, getPostBySlug } from "@/app/lib/markdown";
 import { loadTsxPost, tsxSlugs } from "../../blog/_posts/index";
 import { Footer } from "../../landing/components/Footer";
 
-type Params = { params: { slug: string } };
+// In your project, Next's PageProps expects params to be a Promise.
+// So we model that and await it where needed.
+type PageProps = { params: Promise<{ slug: string }> };
 
 type Frontmatter = {
     title?: string;
@@ -34,8 +36,8 @@ export async function generateStaticParams() {
     return all.map((slug) => ({ slug }));
 }
 
-export async function generateMetadata({ params }: Params): Promise<Metadata> {
-    const { slug } = params;
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
 
     // 1) Try TSX first
     const tsx = await loadTsxPost(slug).catch(() => null);
@@ -70,8 +72,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     }
 }
 
-export default async function BlogPostPage({ params }: Params) {
-    const { slug } = params;
+export default async function BlogPostPage({ params }: PageProps) {
+    const { slug } = await params;
 
     // Prefer TSX post
     const tsx = await loadTsxPost(slug).catch(() => null);
