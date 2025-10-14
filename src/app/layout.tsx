@@ -74,12 +74,9 @@ export const metadata: Metadata = {
         images: ["/images/og/kali-software-og.png"],
     },
     icons: {
-        icon: [
-            { url: "/images/favicon-light.png", media: "(prefers-color-scheme: light)" },
-            { url: "/images/favicon-dark.png", media: "(prefers-color-scheme: dark)" },
-        ],
-        apple: [{ url: "/images/apple-touch-icon.png", sizes: "180x180" }],
-        shortcut: ["/favicon.ico"],
+        icon: [{ url: "/favicon.ico" }],
+        apple: [{ url: "/images/favicon.png", sizes: "500x500" }],
+        shortcut: ["/favicon.png"],
     },
     manifest: "/site.webmanifest",
     themeColor: [
