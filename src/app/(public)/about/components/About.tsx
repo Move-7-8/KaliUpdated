@@ -21,7 +21,7 @@ export default function About() {
                     About Kali Software
                 </p>
                 <h1 className="font-ocr text-4xl leading-[0.95] font-extrabold tracking-tight md:text-5xl">
-                    Nearly every business in Australia will be effected by AI and automation in the coming years.
+                    Nearly every business in Australia will be affected by AI and automation in the coming years.
                 </h1>
                 <p className="mt-4 max-w-3xl text-lg opacity-90 md:text-xl">
                     Yet off-the-shelf solutions are far too blunt for the modern complexity and unique nature of each

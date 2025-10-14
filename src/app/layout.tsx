@@ -58,7 +58,7 @@ export const metadata: Metadata = {
             "Workflow automation, AI copilots, and custom web apps that cut busywork and boost margins. Book a 15-min automation consult.",
         images: [
             {
-                url: "/images/og/kali-software-og.png",
+                url: "/images/og/image.png",
                 width: 1200,
                 height: 630,
                 alt: "Kali Software — Software & Automation Services",

@@ -15,10 +15,11 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 type Props = { children: React.ReactNode };
 
 /**
- * Layout-safe smooth scroll:
- * - Wrapper stays in normal flow (position: relative) with a real height.
- * - Inner content is sticky and translated for the smooth effect.
- * - No scrollerProxy and no fixed, full-screen wrapper -> footer can pin.
+ * Layout-safe smooth scroll with robust sizing:
+ * - Wrapper stays in normal flow with real height.
+ * - Content is sticky and translated for the smooth effect.
+ * - Height stays in sync via ResizeObserver/refresh/resize/load.
+ * - Throttled ScrollTrigger updates and rAF that sleeps when idle.
  */
 export default function SmoothScroll({ children }: Props) {
     const wrapperRef = useRef<HTMLDivElement | null>(null);
@@ -28,12 +29,16 @@ export default function SmoothScroll({ children }: Props) {
         const wrapper = wrapperRef.current!;
         const content = contentRef.current!;
 
+        // Helps on mobile (URL bar resize spam)
+        ScrollTrigger.config({ ignoreMobileResize: true });
+
         const ctx = gsap.context(() => {
             let current = 0;
             let target = 0;
             let raf = 0;
+            let running = false;
+            let lastY = -1;
 
-            // Keep elements in document flow.
             gsap.set(wrapper, { position: "relative", width: "100%" });
             gsap.set(content, {
                 position: "sticky",
@@ -43,46 +48,80 @@ export default function SmoothScroll({ children }: Props) {
             });
 
             const setWrapperHeight = () => {
-                // Temporarily clear transform to measure natural height
+                // Clear transform to measure natural height
                 const prev = content.style.transform;
                 content.style.transform = "";
                 const h = content.scrollHeight;
                 wrapper.style.height = `${h}px`;
-                // Restore transform
                 content.style.transform = prev;
             };
 
-            // Initial measurement
-            setWrapperHeight();
+            // Keep height in sync with any content changes (images, hydration, FAQ toggles, etc.)
+            const ro = new ResizeObserver(() => setWrapperHeight());
+            ro.observe(content);
 
-            // Update height BEFORE ST measures (avoids recursion)
+            const onLoad = () => setWrapperHeight();
+            window.addEventListener("load", onLoad, { passive: true });
+
             const onRefreshInit = () => setWrapperHeight();
+            const onRefresh = () => setWrapperHeight();
             ScrollTrigger.addEventListener("refreshInit", onRefreshInit);
+            ScrollTrigger.addEventListener("refresh", onRefresh);
 
-            // Also update on resize
             const onResize = () => setWrapperHeight();
-            window.addEventListener("resize", onResize);
+            window.addEventListener("resize", onResize, { passive: true });
 
-            // Smooth follow
+            const start = () => {
+                if (running) return;
+                running = true;
+                tick();
+            };
+            const stop = () => {
+                running = false;
+                cancelAnimationFrame(raf);
+            };
+
             const tick = () => {
                 target = window.scrollY || window.pageYOffset || 0;
-                // lower factor = looser; higher = snappier
+                // easing factor: lower = looser, higher = snappier
                 current += (target - current) * 0.12;
-                gsap.set(content, { y: -current });
-                // Update ST positions without triggering a refresh loop
-                ScrollTrigger.update();
-                raf = requestAnimationFrame(tick);
-            };
-            raf = requestAnimationFrame(tick);
 
-            // One refresh after first layout is fine
+                // Only update when the value actually moved enough
+                if (Math.abs(current - lastY) > 0.25) {
+                    gsap.set(content, { y: -current });
+                    ScrollTrigger.update();
+                    lastY = current;
+                }
+
+                // Sleep when close enough to the target
+                if (Math.abs(target - current) < 0.1) {
+                    stop();
+                } else if (running) {
+                    raf = requestAnimationFrame(tick);
+                }
+            };
+
+            // Initial pass
+            setWrapperHeight();
             ScrollTrigger.refresh();
+            start();
+
+            // Wake the loop on user input
+            const onUserScroll = () => start();
+            window.addEventListener("scroll", onUserScroll, { passive: true });
+            window.addEventListener("wheel", onUserScroll, { passive: true });
+            window.addEventListener("touchmove", onUserScroll, { passive: true });
 
             return () => {
-                cancelAnimationFrame(raf);
+                stop();
+                ro.disconnect();
+                window.removeEventListener("load", onLoad);
                 window.removeEventListener("resize", onResize);
+                window.removeEventListener("scroll", onUserScroll);
+                window.removeEventListener("wheel", onUserScroll);
+                window.removeEventListener("touchmove", onUserScroll);
                 ScrollTrigger.removeEventListener("refreshInit", onRefreshInit);
-                // Cleanup styles
+                ScrollTrigger.removeEventListener("refresh", onRefresh);
                 gsap.set(content, { clearProps: "position,top,willChange,transform,width" });
                 gsap.set(wrapper, { clearProps: "position,height,width" });
             };
