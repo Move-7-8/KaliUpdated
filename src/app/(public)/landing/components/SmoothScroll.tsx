@@ -10,6 +10,12 @@ import { useRef } from "react";
 
 // src/app/(public)/landing/components/SmoothScroll.tsx
 
+// src/app/(public)/landing/components/SmoothScroll.tsx
+
+// src/app/(public)/landing/components/SmoothScroll.tsx
+
+// src/app/(public)/landing/components/SmoothScroll.tsx
+
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 type Props = { children: React.ReactNode };
@@ -28,6 +34,23 @@ export default function SmoothScroll({ children }: Props) {
     useGSAP(() => {
         const wrapper = wrapperRef.current!;
         const content = contentRef.current!;
+
+        // Bail out entirely for users who prefer reduced motion
+        const prefersReduced =
+            typeof window !== "undefined" &&
+            window.matchMedia &&
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReduced) {
+            // Ensure layout is normal and non-sticky if we exit early
+            gsap.set(content, { clearProps: "all" });
+            gsap.set(wrapper, { clearProps: "all" });
+            return;
+        }
+
+        // Force native scrolling to be instant while this smoother is active
+        const root = document.documentElement;
+        const prevScrollBehavior = root.style.scrollBehavior;
+        root.style.scrollBehavior = "auto";
 
         // Helps on mobile (URL bar resize spam)
         ScrollTrigger.config({ ignoreMobileResize: true });
@@ -89,7 +112,9 @@ export default function SmoothScroll({ children }: Props) {
                 // Only update when the value actually moved enough
                 if (Math.abs(current - lastY) > 0.25) {
                     gsap.set(content, { y: -current });
-                    ScrollTrigger.update();
+                    if (ScrollTrigger.getAll().length) {
+                        ScrollTrigger.update();
+                    }
                     lastY = current;
                 }
 
@@ -127,7 +152,11 @@ export default function SmoothScroll({ children }: Props) {
             };
         }, wrapper);
 
-        return () => ctx.revert();
+        return () => {
+            // Restore prior scrollBehavior on unmount
+            document.documentElement.style.scrollBehavior = prevScrollBehavior;
+            ctx.revert();
+        };
     });
 
     return (
