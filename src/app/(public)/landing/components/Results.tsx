@@ -62,7 +62,7 @@ function Stars() {
 
 export default function Results() {
     return (
-        <section className="mx-auto w-[85%] py-12">
+        <section className="mx-auto w-[85%]">
             <h2 className="mb-6 text-2xl font-semibold tracking-tight">Recent Case Studies</h2>
 
             {/* Use spacing instead of dividers so the row border is clean */}

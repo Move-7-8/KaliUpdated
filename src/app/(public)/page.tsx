@@ -8,7 +8,7 @@ import { Features } from "./landing/components/Features";
 import { Footer } from "./landing/components/Footer";
 import { Hero } from "./landing/components/Hero";
 import LogoMarquee from "./landing/components/LogoMarcquee";
-import Pillars from "./landing/components/Pillars";
+import PillarsSticky from "./landing/components/Pillars";
 import Results from "./landing/components/Results";
 import { Showcase } from "./landing/components/Showcase";
 import SmoothScroll from "./landing/components/SmoothScroll";
@@ -23,20 +23,22 @@ const LandingPage = () => {
     return (
         <>
             {/* <Topbar /> */}
-            <SmoothScroll>
-                <div className="bg-base-200 pt-18">
-                    <Hero />
-                    <div className="mt-8">
-                        <LogoMarquee />
-                    </div>
-                    <Pillars />
-                    <div className="mt-60">
-                        <Results />
-                        <FAQ />
-                        <Footer />
-                    </div>
+            {/* <SmoothScroll> */}
+            <div className="bg-base-200 pt-18 mix-blend-normal filter-none">
+                <Hero />
+                <div className="mt-8">
+                    <LogoMarquee />
                 </div>
-            </SmoothScroll>
+
+                <PillarsSticky raisePx={100} headerGuardVh={6} />
+
+                <div>
+                    <Results />
+                    <FAQ />
+                    <Footer />
+                </div>
+            </div>
+            {/* </SmoothScroll> */}
         </>
     );
 };
