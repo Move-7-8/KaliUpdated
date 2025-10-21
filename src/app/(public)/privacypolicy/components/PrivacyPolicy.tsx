@@ -175,13 +175,7 @@ export default function PrivacyPolicy() {
                         <div className="divider" />
 
                         <div className="text-sm opacity-70">
-                            <p>
-                                <em>
-                                    This policy is intended as general information only and does not constitute legal
-                                    advice. Consider obtaining your own legal review to ensure this policy suits your
-                                    specific circumstances.
-                                </em>
-                            </p>
+                            <p></p>
                         </div>
                     </div>
                 </div>

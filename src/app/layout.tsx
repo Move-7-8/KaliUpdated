@@ -1,11 +1,14 @@
 import { Analytics } from "@vercel/analytics/next";
 import { type Metadata } from "next";
+import Script from "next/script";
 import { type ReactNode } from "react";
 
 import ContactModal from "@/app/(public)/landing/components/ContactModal";
 import ScrollToTopOnRouteChange from "@/components/ScrollToTop";
 import { ConfigProvider } from "@/contexts/config";
 import "@/styles/app.css";
+
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-RWYV9J31R6";
 
 export const metadata: Metadata = {
     // Keep a clear, keyword-rich default; page components can still override `title` with a specific one.
@@ -113,6 +116,25 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                             url: "https://www.kalisoftware.io/",
                             logo: "https://www.kalisoftware.io/images/og/kali-software-og.png",
                         }),
+                    }}
+                />
+
+                {/* Google Analytics 4 (gtag.js) via next/script */}
+                <Script
+                    id="ga4-src"
+                    src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+                    strategy="afterInteractive"
+                />
+                <Script
+                    id="ga4-init"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                          window.dataLayer = window.dataLayer || [];
+                          function gtag(){dataLayer.push(arguments);}
+                          gtag('js', new Date());
+                          gtag('config', '${GA_MEASUREMENT_ID}');
+                        `,
                     }}
                 />
             </head>
