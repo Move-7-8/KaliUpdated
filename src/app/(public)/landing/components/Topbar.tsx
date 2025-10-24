@@ -57,7 +57,7 @@ export const Topbar = () => {
                 data-scrolling={scrolling}
                 data-at-top={scrollPosition < 30}
                 className="group fixed inset-x-0 top-0 z-[60] flex justify-center transition-[top] duration-500 data-[at-top=false]:top-3 data-[scrolling=down]:-top-full sm:container md:data-[at-top=false]:top-4">
-                <div className="group-data-[at-top=false]:bg-primary group-data-[at-top=false]:dark:bg-primary /* keep a on always to prevent layout shift, then color it on scroll */ flex w-full items-center justify-between rounded-full border border-2 border-transparent px-6 py-3 transition-all duration-500 group-data-[at-top=false]:w-[800px] group-data-[at-top=false]:border-black group-data-[at-top=false]:shadow group-data-[at-top=false]:max-sm:mx-2 lg:py-1.5">
+                <div className="group-data-[at-top=false]:bg-primary group-data-[at-top=false]:dark:bg-primary /* keep a on always to prevent layout shift, then color it on scroll */ flex w-full items-center justify-between rounded-full border border-2 border-transparent px-7 py-4 transition-all duration-500 group-data-[at-top=false]:w-[800px] group-data-[at-top=false]:border-black group-data-[at-top=false]:shadow group-data-[at-top=false]:max-sm:mx-2 lg:px-8 lg:py-3">
                     <div className="flex items-center gap-2">
                         <div className="flex-none lg:hidden">
                             <div className="drawer">

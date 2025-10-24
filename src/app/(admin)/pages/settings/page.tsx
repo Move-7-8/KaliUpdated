@@ -57,7 +57,7 @@ const SettingsPage = () => {
                                                 className="grow"
                                                 placeholder="Name"
                                                 id="name"
-                                                defaultValue="Denish Navadiya"
+                                                defaultValue="Ben"
                                             />
                                         </label>
                                     </div>
@@ -65,7 +65,7 @@ const SettingsPage = () => {
                                         <label className="fieldset-label">User</label>
                                         <label className="input w-full">
                                             <span className="label">nexus.com/</span>
-                                            <input placeholder="username" type="text" defaultValue="withden" />
+                                            <input placeholder="username" type="text" defaultValue="" />
                                         </label>
                                     </div>
 
@@ -80,7 +80,7 @@ const SettingsPage = () => {
                                                 className="grow"
                                                 placeholder="Email"
                                                 id="email"
-                                                defaultValue="withden.dev@gmail.com"
+                                                defaultValue=""
                                             />
                                         </label>
                                     </div>

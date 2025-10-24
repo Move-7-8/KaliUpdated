@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 import PillarCard from "./PillarCard";
 
@@ -40,54 +40,58 @@ type Props = {
 const DEFAULT_ITEMS: Pillar[] = [
     {
         label: "Consulting",
-        title: "Clarity, roadmap & ROI estimated in days",
-        content: <p>Find the tasks to automate, the platforms to improve, and the insights hiding in your data.</p>,
-        outcomes: ["Free workflow audit", "Free data audit"],
-        priceText: "Starts free (30-min consult).",
+        title: "Find out what's possible for your business",
+        content: <p>Find the work to automate, the platforms to integrate, and the insights hiding in your data.</p>,
+        outcomes: ["Identify your goals", "Identify the risks", "Estimated roadmap and ROI"],
+        priceText: "",
         imageSrc: "/images/landing/consulting.png",
         imageAlt: "Consulting engagement roadmap",
-        primaryLabel: "Contact Us",
-        primaryUsesContactModal: true,
-        secondaryLabel: "Case study",
+        primaryLabel: "View Service",
+        primaryHref: "/services",
+        primaryUsesContactModal: false,
+        secondaryLabel: "Read Blog",
         secondaryHref: "/services#consulting",
     },
     {
-        label: "Dashboards & Analytics",
-        title: "End spreadsheet chaos",
-        content: <p>Centralise your data, define metrics, and own dashboards your team actually uses.</p>,
-        outcomes: ["Data analysis", "Onshore data storage", "Live dashboards + alerts"],
-        priceText: "From A$6–12k per function",
+        label: "Data Integration",
+        title: "Gain a Single Source of Truth ",
+        content: <p>Unify your data across your platforms.</p>,
+        outcomes: ["Reduce data re-entry labour", "Reduce data re-entry errors", "Secure your data onshore"],
+        priceText: "",
         imageSrc: "/images/landing/dashboards.png",
-        primaryLabel: "Contact Us",
-        primaryUsesContactModal: true,
-        secondaryLabel: "Interactive Demo",
+        primaryLabel: "View Service",
+        primaryHref: "/services",
+        primaryUsesContactModal: false,
+        secondaryLabel: "Read Blog",
         secondaryHref: "https://demo-dashboard-phi.vercel.app/auth/login",
         secondaryNewTab: true,
     },
     {
-        label: "Workflow Automation",
-        title: "Cut manual work by 60%",
-        content: <p>Automate tasks and processes across your business.</p>,
-        outcomes: ["Rules as Code systems", "AI-powered workflows"],
-        priceText: "From A$9–40k initial build + support",
+        label: "Data Analysis",
+        title: "Make Informed Decisions",
+        content: <p>Dashboards and reporting built for your business.</p>,
+        outcomes: ["Live Dashboards", "Automated Reporting", "Predictive Analytics"],
+        priceText: "",
         lottieSrc: "/images/lottie/automate.json",
         lottieLoop: true,
-        primaryLabel: "Contact Us",
-        primaryUsesContactModal: true,
-        secondaryLabel: "Case study",
+        primaryLabel: "View Service",
+        primaryHref: "/services",
+        primaryUsesContactModal: false,
+        secondaryLabel: "Read Blog",
         secondaryHref: "blog/hubspot-xero-australia-how-to",
     },
     {
-        label: "Product Development",
-        title: "Ship secure apps - fast",
-        content: <p>Prototype quickly, and ship an MVP to users with a dedicated team of developers.</p>,
-        outcomes: ["UI/UX Design", "Full-stack Development"],
-        priceText: "From A$9–40k initial build + support",
+        label: "Digital",
+        title: "The Experts in Custom",
+        content: <p>Harness data and AI to build something new. </p>,
+        outcomes: ["UI/UX Design", "Full-stack development", "AI integration"],
+        priceText: "",
         imageSrc: "/images/landing/custom.png",
-        primaryLabel: "Contact Us",
-        primaryUsesContactModal: true,
-        secondaryLabel: "Case study",
-        secondaryHref: "/services#product-development",
+        primaryLabel: "View Service",
+        primaryHref: "/services",
+        primaryUsesContactModal: false,
+        secondaryLabel: "Read Insights",
+        secondaryHref: "/blog",
     },
 ];
 
@@ -103,8 +107,53 @@ export default function PillarsSticky({
 }: Props) {
     const count = items.length;
 
+    // Mark the card nearest the sticky target as "active" so only it receives pointer events.
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+
+        const cards = Array.from(document.querySelectorAll<HTMLElement>(".stack__card"));
+        if (!cards.length) return;
+
+        let raf = 0;
+        const computeActive = () => {
+            raf = 0;
+            const stackTop = window.innerHeight * 0.5 - raisePx; // matches calc(50svh - ${raisePx}px)
+            let best: HTMLElement | null = null;
+            let bestDist = Infinity;
+
+            for (const el of cards) {
+                const rect = el.getBoundingClientRect();
+                const dist = Math.abs(rect.top - stackTop);
+                if (dist < bestDist) {
+                    bestDist = dist;
+                    best = el;
+                }
+            }
+
+            for (const el of cards) {
+                if (el === best) el.setAttribute("data-active", "true");
+                else el.removeAttribute("data-active");
+            }
+        };
+
+        const onScroll = () => {
+            if (!raf) raf = window.requestAnimationFrame(computeActive);
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        computeActive(); // initial
+
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            window.removeEventListener("resize", onScroll);
+            if (raf) cancelAnimationFrame(raf);
+        };
+    }, [raisePx, count]);
+
     return (
-        <section className="bg-base-200 text-base-content pt-0 pb-2" aria-labelledby="services-heading">
+        <section className="bg-base-200 text-base-content pt-6 pb-2" aria-labelledby="services-heading">
+            {/* Match LogoMarquee container (w-[90%] px-6 md:px-4) so headings align */}
             <div className="mx-auto w-[90%] px-6 md:px-4">
                 <div
                     className="stack relative"
@@ -152,7 +201,8 @@ export default function PillarsSticky({
                                 outcomes={item.outcomes}
                                 proof={item.proof}
                                 priceText={item.priceText}
-                                trustNote={item.trustNote}>
+                                trustNote={item.trustNote}
+                                showActions={i === count - 1}>
                                 {item.content}
                             </PillarCard>
                         ))}
@@ -205,6 +255,14 @@ export default function PillarsSticky({
                     .stack {
                         --tail-vh: 8svh;
                     }
+                }
+
+                /* >>> Interactivity gating so only the focused card can receive clicks <<< */
+                .stack__card {
+                    pointer-events: none;
+                }
+                .stack__card[data-active="true"] {
+                    pointer-events: auto;
                 }
             `}</style>
         </section>

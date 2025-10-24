@@ -34,7 +34,7 @@ interface LogoMarqueeProps {
 
 const LogoMarquee: React.FC<LogoMarqueeProps> = ({
     className = "",
-    durationSec = 24,
+    durationSec = 42,
     gapRem = 2,
     pauseOnHover = true,
 }) => {
@@ -97,10 +97,10 @@ const LogoMarquee: React.FC<LogoMarqueeProps> = ({
             />
 
             <div className="relative z-10">
-                <h2 className="mt-14 mb-10 text-2xl font-semibold tracking-tight">Trusted by</h2>
+                <h2 className="mt-10 mb-6 text-2xl font-semibold tracking-tight">Trusted by</h2>
 
                 <div
-                    className="relative mt-4 w-full overflow-hidden"
+                    className="relative w-full overflow-hidden"
                     aria-label="Trusted by marquee"
                     style={{
                         WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 80%, transparent)",

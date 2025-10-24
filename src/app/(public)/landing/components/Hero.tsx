@@ -1,15 +1,6 @@
-// src/app/landing/components/Hero.tsx
 "use client";
 
 import { useCallback, useEffect, useRef } from "react";
-
-// src/app/landing/components/Hero.tsx
-
-// src/app/landing/components/Hero.tsx
-
-// src/app/landing/components/Hero.tsx
-
-// src/app/landing/components/Hero.tsx
 
 export const Hero = () => {
     const root = useRef<HTMLDivElement | null>(null);
@@ -29,12 +20,14 @@ export const Hero = () => {
         );
     }, []);
 
-    // Autoplay video (no scroll effects)
+    // Autoplay video and slow playback
     useEffect(() => {
         const v = vidRef.current;
         if (!v) return;
         const tryPlay = async () => {
             try {
+                v.defaultPlaybackRate = 0.8;
+                v.playbackRate = 0.8;
                 if (v.paused) await v.play();
             } catch {}
         };
@@ -48,13 +41,13 @@ export const Hero = () => {
             ref={root}
             className={[
                 "hero relative isolate overflow-hidden bg-black/80",
-                "mx-auto w-[98%] rounded-2xl border-[3px] border-black md:border-[3px]",
+                "mx-auto min-h-[70vh] w-[98%] rounded-2xl border-[3px] border-black md:border-[3px]",
             ].join(" ")}>
             {/* Background layer (video + blue tint that does NOT affect text) */}
             <div className="absolute inset-0 z-0">
                 <video
                     ref={vidRef}
-                    className="will-change-filter absolute inset-0 h-full w-full object-cover blur-[2px] will-change-transform"
+                    className="will-change-filter absolute inset-0 h-full w-full object-cover blur-[0.5px] will-change-transform"
                     autoPlay
                     muted
                     loop
@@ -76,6 +69,17 @@ export const Hero = () => {
                 />
             </div>
 
+            {/* Full-hero glass overlay (light strength) */}
+            <div
+                aria-hidden="true"
+                className={[
+                    "pointer-events-none absolute inset-0 z-10 rounded-2xl",
+                    "bg-white/5 ring-1 ring-white/10",
+                    "backdrop-blur-sm backdrop-contrast-110 backdrop-saturate-125",
+                    "supports-[backdrop-filter]:bg-white/5 supports-[backdrop-filter]:backdrop-blur-sm",
+                ].join(" ")}
+            />
+
             {/* Wipe layer kept (hidden) */}
             <div
                 className="hero-wipe pointer-events-none absolute inset-0 z-30 hidden bg-black/80"
@@ -85,10 +89,14 @@ export const Hero = () => {
             {/* Content */}
             <div className="hero-content relative z-20 container px-4 py-20 text-center sm:px-6 sm:py-24 sm:text-left lg:px-10 lg:py-28 xl:py-32">
                 <div className="mx-auto flex w-full max-w-6xl flex-col items-center sm:items-start">
-                    <h1 className="hero-h1 max-w-5xl text-4xl leading-[0.95] font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-                        <span className="line block">Software &amp; Automation</span>
+                    <h1 className="hero-h1 max-w-5xl [font-family:var(--font-display)] text-4xl leading-[0.95] font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
+                        <span className="line block">Data Consulting</span>
                         <span className="line block">for Australian Businesses</span>
                     </h1>
+
+                    <p className="hero-subheading mt-4 max-w-3xl [font-family:var(--font-display)] text-lg font-medium text-white/90 sm:text-xl md:text-2xl">
+                        Data integration · Data analysis · Custom software
+                    </p>
 
                     {/* CTA block */}
                     <div className="mt-10 flex flex-col justify-center gap-3 sm:mt-12 sm:flex-row sm:items-center sm:justify-start">

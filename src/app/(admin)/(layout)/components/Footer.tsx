@@ -4,10 +4,7 @@ export const Footer = () => {
     return (
         <div className="-mt-2 flex items-center justify-between px-6 pb-4">
             <p>
-                Developed by{" "}
-                <Link href="https://x.com/withden_" target="_blank" className="text-primary">
-                    Denish Navadiya
-                </Link>
+                Developed by <Link href="https://x.com/" target="_blank" className="text-primary"></Link>
             </p>
             <Link
                 href="https://daisyui.com/store/244268"

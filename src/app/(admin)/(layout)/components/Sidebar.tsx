@@ -103,8 +103,8 @@ export const Sidebar = ({ menuItems }: { menuItems: ISidebarMenuItem[] }) => {
                                 </div>
                             </div>
                             <div className="grow -space-y-0.5">
-                                <p className="text-sm font-medium">Denish N</p>
-                                <p className="text-base-content/60 text-xs">@withden</p>
+                                <p className="text-sm font-medium"></p>
+                                <p className="text-base-content/60 text-xs"></p>
                             </div>
                             <span className="iconify lucide--chevrons-up-down text-base-content/60 size-4" />
                         </div>

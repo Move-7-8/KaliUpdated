@@ -39,7 +39,7 @@ const CASE_STUDIES: CaseStudy[] = [
     {
         id: "Skimreader",
         client: "Skimreader",
-        industry: "Startup",
+        industry: "AI",
         title: "Skimreader",
         blurb: "AI-powered reading tool startup.",
         image: "/images/investors/skimread.png",

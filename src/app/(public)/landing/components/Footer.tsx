@@ -19,10 +19,10 @@ export const Footer = () => {
                             your development process
                         </p>
                         <div className="mt-6 flex items-center gap-2.5 xl:mt-16">
-                            <Link className="btn btn-sm btn-circle" href="https://github.com/withden" target="_blank">
+                            <Link className="btn btn-sm btn-circle" href="https://github.com/" target="_blank">
                                 <span className="iconify lucide--github size-4" />
                             </Link>
-                            <Link className="btn btn-sm btn-circle" href="https://x.com/withden_" target="_blank">
+                            <Link className="btn btn-sm btn-circle" href="https://x.com/" target="_blank">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="24"

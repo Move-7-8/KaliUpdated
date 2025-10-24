@@ -2,7 +2,7 @@ export const TitleWidget = () => {
     return (
         <div className="flex flex-wrap items-end gap-3 sm:gap-6 xl:gap-12">
             <div className="from-base-content to-secondary inline-block bg-gradient-to-tr from-40% bg-clip-text text-xl font-semibold tracking-tight text-transparent sm:text-3xl">
-                <p>Welcome Back, Denish</p>
+                <p>Welcome Back, Ben</p>
                 <p className="mt-1">Here’s an overview of insights</p>
             </div>
             <div className="flex items-center gap-4">

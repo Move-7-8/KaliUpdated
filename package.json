@@ -1,13 +1,13 @@
 {
-    "name": "nexus-nextjs",
-    "description": "Modern admin and client dashboards built with DaisyUI. Clean, responsive, and fully customizable.",
+    "name": "Kali Consulting",
+    "description": "Data consulting and automation services for Australian businesses.",
     "version": "2.3.0",
     "private": true,
     "type": "module",
-    "homepage": "https://nexus.daisyui.com/",
+    "homepage": "https://kaliconsulting.io/",
     "author": {
-        "name": "Denish Navadiya",
-        "url": "https://x.com/withden_"
+        "name": "",
+        "url": ""
     },
     "scripts": {
         "dev": "next dev",

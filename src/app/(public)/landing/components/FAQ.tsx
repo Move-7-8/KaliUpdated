@@ -13,98 +13,137 @@ export const FAQ = () => {
 
     const faqs: FAQItem[] = [
         {
-            q: "How do you automate business processes?",
+            q: "Which systems can you integrate for businesses in Australia?",
             a: (
                 <>
-                    Start by mapping the manual steps (triggers, rules, approvers, systems). Then connect your tools
-                    (Xero, Stripe, HubSpot, ClickUp, Slack, etc.) via APIs, build workflows with Python/Next.js, add
-                    error handling and logs, and ship in weekly milestones so you see ROI fast.
+                    We specialise in custom operational data integrations, but also integrate with the usual SME
+                    platforms. Examples include:
+                    <ul>
+                        <li>Finance & ERP: Xero, MYOB</li>
+                        <li>Commerce & POS: Shopify, Square.</li>
+                        <li>
+                            Files, lakes & cloud storage: SharePoint/OneDrive, Google Drive, S3, IMAP email attachments.
+                        </li>
+                        <li>
+                            Custom sources: REST/GraphQL services, webhooks, Postgres/SQL Server, CSV/PDF parsing & OCR,
+                            and internal databases.
+                        </li>
+                    </ul>
+                    Whether your data is on paper, in a PDF, represents spatial coordinates or transactions, we can help
+                    you integrate it.
                 </>
             ),
         },
         {
-            q: "What is workflow automation and how does it work?",
-            a: "Triggers (e.g., new lead, payment, form submission) kick off actions like enrichment, approvals, document generation, notifications, and data sync—using rules and AI where it helps. This is the mundane work that cost teams time and energy.",
-        },
-        {
-            q: "What are the limitations of AI and automation?",
-            a: "There are a lot! AI is not a silver bullet and there are no great off the shelf solutions if you already have processes in place. Any AI or automation solution must consider your internal processes, workflows, staff training, the risks associated with hallucination (and how to prevent them). AI and automation are great tools for the right task, and we can tell you if the task is right - and the limitations of the implementation.",
-        },
-        {
-            q: "Should I use Zapier/ no code solutions or build custom automation with code?",
-            a: "No-code is great to validate. For scale, resilience, security, and anything but the simplest logic, API-first automation with code wins. Often we start no-code to brainstorm and map out the process with you, then migrate high-value flows to a TypeScript/Python service with tests and monitoring.",
-        },
-        {
-            q: "How much does automation or an AI project cost in Australia?",
+            q: "Can you connect Xero to Power BI, BigQuery or Snowflake?",
             a: (
                 <>
-                    Consultation and initial audit is completely free. The majority of our projects sit around $2,500 a
-                    month, and that includes multiple workflow automations, ongoing support and optimisation. Anything
-                    high value or particularly complex can be discussed on a case by case basis.
+                    Yes. We build robust pipelines for <strong>Xero → Power BI</strong>,{" "}
+                    <strong>MYOB → Power BI</strong>, <strong>Xero/MYOB → BigQuery</strong> or{" "}
+                    <strong>Snowflake</strong>. You’ll get refreshed datasets, documented metrics (e.g., Gross Margin,
+                    AR/AP ageing, GST), and row-level security if required.
                 </>
             ),
         },
         {
-            q: "What ROI can I expect from automation?",
-            a: "Most first-phase projects save 30–60% of admin time in the target process, reduce errors, and speed up reporting. We quantify the labour value of hours saved, cycle time, and accuracy, then reinvest wins into the next highest-ROI workflow.",
-        },
-        {
-            q: "How long does it take to build an MVP or dashboard?",
-            a: "Simple dashboards ship in 3 weeks once data sources are connected. Automations are usually 3–6 weeks. A scoped MVP web app is commonly 4-8 weeks, depending on integrations and security.",
-        },
-        {
-            q: "Which analytics tool should I use: Power BI, Looker, Metabase, or custom?",
-            a: "It depends on data sources, governance, and budget. SMBs often start with Metabase or Power BI; scale-ups like Looker or a custom Next.js data app for embedded analytics.",
+            q: "ETL vs ELT — which approach is best ?",
+            a: (
+                <>
+                    In general, in 2025, <strong>ELT</strong> (land raw data then transform in-warehouse with SQL/dbt)
+                    offers faster iteration and auditability. We still use <strong>ETL</strong> where pre-processing or
+                    third-party constraints require it. We’ll choose the simplest option that meets governance and
+                    freshness needs.
+                </>
+            ),
         },
         {
             q: "Do I need a data warehouse before dashboards?",
-            a: "Not always. If your data lives in a few systems, we can centralise just enough for reliable metrics. As you grow, we add a warehouse and models for speed, governance, and reuse.",
+            a: "Not always. For one or two sources we can stand up reliable metrics quickly. If you have multiple systems, need history, or want governance and speed at scale, we add a warehouse (BigQuery / Snowflake / Postgres) plus models to create a single source of truth.",
         },
         {
-            q: "Can you integrate Xero, Stripe, HubSpot, ClickUp, Slack, and PandaDoc?",
-            a: "Yes. We can make just about any kind of software integrate with our systems, and we have a lot of experience with all of the above.",
+            q: "How fast until we see value?",
+            a: "First integrations and insights typically land well before the end of a project. We prioritise the two or three highest-value questions and ship a usable integration or dashboard early, then iterate.",
         },
         {
             q: "Will my data stay in Australia? (Data residency & privacy)",
             a: (
                 <>
-                    Yes. We can host in Australia and design for OAIC privacy compliance with least-privilege access,
-                    audit logs, and retention controls.
+                    Yes. On request we host and process in Australian cloud regions and design to align with the{" "}
+                    <strong>Australian Privacy Principles (APPs)</strong>. We use least-privilege access, audit logs,
+                    encrypted secrets and retention controls.
                 </>
             ),
         },
         {
-            q: "Who owns the IP and source code for custom applications?",
-            a: "You do. On completion and payment, IP is assigned to your company. We provide full source code access and handover documentation.",
+            q: "How do you ensure data quality and a single source of truth?",
+            a: "We define business-ready metrics with you (e.g., Gross Margin, CAC, On-time-in-full), add validation tests, handle late/changed data, and version SQL models so calculations are consistent across dashboards. We document lineage and set role-based access.",
         },
         {
-            q: "How do I choose the right automation agency?",
-            a: "Ensure they have strong technical expertise. Speak with their past clients, ask technical questions and read through their case studies. Ask for a small fixed-price pilot and prove your highest-value workflow first.",
+            q: "What ROI can we expect from data integration?",
+            a: "The largest ROI here comes from the reduction in mistakes (incorrect data entry, re-entry errors, incorrect reconciliation), the times saved by manual data re-entry, and the power of having a universal source of truth. Once your data is integrated, you can access advanced analytics, and AI systems.",
+        },
+
+        {
+            q: "What ROI can we expect from better data analysis?",
+            a: "A decision maker is only as good as the information they have. Once your data is integrated, you can access analytics across your entire organisation. Whether its live dashboards or a specialised report, if you don't have the data, (or worse, you do but it's incorrect), you're at a fundamental disadvantage.",
         },
         {
-            q: "Can you work with legacy systems and spreadsheets?",
-            a: "Yes. We build adapters around legacy apps, read/write spreadsheets safely, and progressively replace fragile steps with APIs and durable services.",
+            q: "Can you work with spreadsheets and legacy systems?",
+            a: "Yes. We safely read/write spreadsheets, build adapters around legacy apps, and progressively replace brittle steps with robust pipelines and APIs at the right pace for your team.",
+        },
+        {
+            q: "How do you make integrations reliable?",
+            a: "We use idempotent ELT/ETL patterns, retries & alerting, change-data capture where possible, and monitoring with logs and metrics. Syncs can run hourly or daily based on freshness needs.",
+        },
+        {
+            q: "How do you handle security?",
+            a: "Least-privilege access, onshore data residency, secrets management, encryption in transit & at rest, optional SSO, and audit logs. We’re happy to align to your policies and complete security questionnaires.",
+        },
+        {
+            q: "What industries do you serve?",
+            a: "We have particular expertise in the Finance industry. We excel in custom and novel data sources, if you have unique and complex operational data, or simply want your Salesforce data to flow into Xero, we can help.",
+        },
+        {
+            q: "What does a typical engagement look like?",
+            a: (
+                <>
+                    <ul>
+                        <li>
+                            <strong>Discover:</strong> Free audit, success metrics, data map.
+                        </li>
+                        <li>
+                            <strong>Design:</strong> Integration plan, metrics definitions, dashboard mocks.
+                        </li>
+                        <li>
+                            <strong>Deliver:</strong> Pipelines + model + v1 dashboards.
+                        </li>
+                        <li>
+                            <strong>Improve:</strong> Monthly enhancements, new questions, cost tuning.
+                        </li>
+                    </ul>
+                </>
+            ),
         },
         {
             q: "Do you offer maintenance and support?",
-            a: "Yes—SLA support, proactive monitoring, and monthly improvement sprints.",
+            a: "Yes—SLA support, proactive monitoring, and monthly improvement sprints. We can also train your team to self-serve.",
         },
         {
             q: "Can we start with a free assessment?",
             a: (
                 <>
-                    Yes. Book a free workflow audit. We’ll identify quick wins, an ROI estimate, and the fastest path to
-                    value with a simple plan.
+                    Yes. Get in touch to book a free <strong>data audit</strong>. We’ll map your sources, identify quick
+                    wins, estimate ROI, and propose the fastest path to value with a simple plan.
                 </>
             ),
         },
         {
             q: "Do you work only in Sydney and Perth?",
-            a: "We’re able to work Australia-wide (though have a physical presence in Perth and Sydney).",
+            a: "We work Australia-wide (with a physical presence in Perth and Sydney). Remote delivery is our default; on-site where it helps (Melbourne, Brisbane, Adelaide and beyond).",
         },
         {
-            q: "What tech stack do you use for automation and AI?",
-            a: "We work with a range of cutting edge technologies. Most commonly,Next.js/TypeScript for apps, Python / n8n for data and automation, Vercel/AWS for cloud.",
+            q: "What tech stack do you use?",
+            a: "Next.js/TypeScript for custom web applications and dashboards, Python for custom data & orchestration, dbt/SQL for models, Fivetran for integration where needed, Power BI/Tableau for BI, and BigQuery/Snowflake/Postgres/MongoDB on the data side. We deploy to Vercel, AWS, Azure or GCP based on your needs.",
         },
     ];
 
@@ -134,7 +173,8 @@ export const FAQ = () => {
                     </div> */}
                     <h2 className="mb-2 text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
                     <p className="text-base-content/70 inline-block max-w-lg font-sans">
-                        Questions our clients commonly ask about automation, data, and custom web applications.
+                        Questions Australian SMEs ask about <strong>data integration services</strong>, and{" "}
+                        <strong>analytics consulting</strong>.
                     </p>
                 </div>
 

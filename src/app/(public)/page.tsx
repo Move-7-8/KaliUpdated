@@ -22,11 +22,9 @@ export const metadata: Metadata = {
 const LandingPage = () => {
     return (
         <>
-            {/* <Topbar /> */}
-            {/* <SmoothScroll> */}
-            <div className="bg-base-200 pt-18 mix-blend-normal filter-none">
+            <div className="bg-base-200 pt-2 mix-blend-normal filter-none">
                 <Hero />
-                <div className="mt-8">
+                <div className="">
                     <LogoMarquee />
                 </div>
 

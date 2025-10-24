@@ -32,6 +32,9 @@ type PillarCardProps = {
     inStack?: boolean;
     style?: React.CSSProperties;
     primaryUsesContactModal?: boolean;
+
+    /** Controls whether the action buttons render */
+    showActions?: boolean;
 };
 
 const isExternal = (href?: string) => !!href && (/^https?:\/\//i.test(href) || href.startsWith("//"));
@@ -64,6 +67,7 @@ export default function PillarCard({
     inStack = true,
 
     style,
+    showActions = true,
 }: PillarCardProps) {
     const secondaryShouldNewTab = (secondaryNewTab ?? false) || isExternal(secondaryHref);
     const secondaryTarget = secondaryShouldNewTab ? "_blank" : undefined;
@@ -97,12 +101,12 @@ export default function PillarCard({
                 "card",
                 "shadow-xl",
                 "w-full",
-                "max-w-[85%]",
+                "max-w-[95%]", // was 85%
                 "mx-auto",
                 spacingClasses,
                 "rounded-3xl",
-                "min-h-[48vh] md:min-h-[52vh] lg:min-h-[56vh]",
-                "border-[3px] border-black md:border-[4px]",
+                "min-h-[50vh] md:min-h-[54vh] lg:min-h-[58vh]", // reduced a bit (was 48/52/56) — previously 54/58/62
+                "border-[2px] border-black md:border-[2px]",
                 "font-heading",
                 "mix-blend-normal filter-none",
                 bgClassName,
@@ -131,61 +135,63 @@ export default function PillarCard({
                             </ul>
                         ) : null}
 
-                        <div className="mt-auto">
-                            <div className="flex flex-wrap gap-3 pt-5">
-                                {useContactModalPrimary ? (
-                                    <div className="[&>button]:btn [&>button]:btn-secondary [&>button]:cursor-pointer [&>button]:border-2 [&>button]:border-black [&>button]:font-semibold [&>button]:shadow">
+                        {showActions ? (
+                            <div className="mt-auto">
+                                <div className="flex flex-wrap gap-3 pt-5">
+                                    {useContactModalPrimary ? (
+                                        <div className="[&>button]:btn [&>button]:btn-secondary [&>button]:cursor-pointer [&>button]:border-2 [&>button]:border-black [&>button]:font-semibold [&>button]:shadow">
+                                            <button
+                                                type="button"
+                                                onClick={() => openContact(defaultInitial)}
+                                                aria-haspopup="dialog"
+                                                aria-controls="contact-modal">
+                                                {primaryLabel}
+                                            </button>
+                                        </div>
+                                    ) : primaryHref ? (
+                                        <a
+                                            href={primaryHref}
+                                            onClick={primaryOnClick}
+                                            className="btn btn-secondary border-2 border-black font-semibold">
+                                            {primaryLabel}
+                                        </a>
+                                    ) : (
                                         <button
-                                            type="button"
-                                            onClick={() => openContact(defaultInitial)}
-                                            aria-haspopup="dialog"
-                                            aria-controls="contact-modal">
+                                            onClick={primaryOnClick}
+                                            className="btn btn-secondary border-2 border-black font-semibold">
                                             {primaryLabel}
                                         </button>
-                                    </div>
-                                ) : primaryHref ? (
-                                    <a
-                                        href={primaryHref}
-                                        onClick={primaryOnClick}
-                                        className="btn btn-secondary border-2 border-black font-semibold">
-                                        {primaryLabel}
-                                    </a>
-                                ) : (
-                                    <button
-                                        onClick={primaryOnClick}
-                                        className="btn btn-secondary border-2 border-black font-semibold">
-                                        {primaryLabel}
-                                    </button>
-                                )}
+                                    )}
 
-                                {useContactModalSecondary ? (
-                                    <div className="[&>button]:btn [&>button]:btn-outline [&>button]:bg-base-100 [&>button]:text-base-content [&>button]:cursor-pointer [&>button]:border-2 [&>button]:border-black [&>button]:shadow">
+                                    {useContactModalSecondary ? (
+                                        <div className="[&>button]:btn [&>button]:btn-outline [&>button]:bg-base-100 [&>button]:text-base-content [&>button]:cursor-pointer [&>button]:border-2 [&>button]:border-black [&>button]:shadow">
+                                            <button
+                                                type="button"
+                                                onClick={() => openContact({ message: `${label ?? title} — Contact` })}
+                                                aria-haspopup="dialog"
+                                                aria-controls="contact-modal">
+                                                {secondaryLabel}
+                                            </button>
+                                        </div>
+                                    ) : secondaryHref ? (
+                                        <a
+                                            href={secondaryHref}
+                                            onClick={secondaryOnClick}
+                                            target={secondaryTarget}
+                                            rel={secondaryRel}
+                                            className="btn btn-outline bg-base-100 text-base-content border-2 border-black">
+                                            {secondaryLabel}
+                                        </a>
+                                    ) : (
                                         <button
-                                            type="button"
-                                            onClick={() => openContact({ message: `${label ?? title} — Contact` })}
-                                            aria-haspopup="dialog"
-                                            aria-controls="contact-modal">
+                                            onClick={secondaryOnClick}
+                                            className="btn btn-outline bg-base-100 text-base-content border-2 border-black">
                                             {secondaryLabel}
                                         </button>
-                                    </div>
-                                ) : secondaryHref ? (
-                                    <a
-                                        href={secondaryHref}
-                                        onClick={secondaryOnClick}
-                                        target={secondaryTarget}
-                                        rel={secondaryRel}
-                                        className="btn btn-outline bg-base-100 text-base-content border-2 border-black">
-                                        {secondaryLabel}
-                                    </a>
-                                ) : (
-                                    <button
-                                        onClick={secondaryOnClick}
-                                        className="btn btn-outline bg-base-100 text-base-content border-2 border-black">
-                                        {secondaryLabel}
-                                    </button>
-                                )}
+                                    )}
+                                </div>
                             </div>
-                        </div>
+                        ) : null}
                     </div>
 
                     {/* Right: visual — now shows down to md, hidden below */}
