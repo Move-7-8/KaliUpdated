@@ -21,15 +21,14 @@ export default function OurStory() {
             <div className="md:col-span-7">
                 <h2 className="font-ocr text-3xl font-extrabold tracking-tight md:text-4xl">Our Story</h2>
                 <p className="mt-4 text-base opacity-90 md:text-lg">
-                    Kali Software was born out of a Perth based startup in 2022. After implementing our own web app and
-                    AI systems, we received requests from other companies to help with their workflows, spreadsheets,
-                    custom agents, etc. Since then, we've seen our offering progress from a novelty for already
-                    technical companies, to an operational efficiency best practice for businesses across all
-                    industries.
+                    Kali Software was born out of a Perth-based investment data startup in 2022. After building our own
+                    app and AI systems, we received requests from other companies to help with their workflows,
+                    spreadsheets, and custom agents. Since then, we've seen our clients progress from implementing data
+                    integration to get an advantage over their competitors, to using integration best practice.
                 </p>
                 <p className="mt-4 text-base opacity-90 md:text-lg">
-                    Today, we've established a presence in Sydney, and we partner with finance, operations, and product
-                    leaders to design and ship practical systems.
+                    Today, we've also established a presence in Sydney, and we partner with operations, marketing,
+                    finance, and product leaders to design and ship practical data integration and analysis systems.
                 </p>
             </div>
 

@@ -61,7 +61,7 @@ export const FAQ = () => {
             a: "Not always. For one or two sources we can stand up reliable metrics quickly. If you have multiple systems, need history, or want governance and speed at scale, we add a warehouse (BigQuery / Snowflake / Postgres) plus models to create a single source of truth.",
         },
         {
-            q: "How fast until we see value?",
+            q: "How long until we see value?",
             a: "First integrations and insights typically land well before the end of a project. We prioritise the two or three highest-value questions and ship a usable integration or dashboard early, then iterate.",
         },
         {
@@ -171,7 +171,7 @@ export const FAQ = () => {
                     {/* <div className="inline-flex items-center rounded border border-purple-500/10 bg-purple-500/5 p-2">
                         <span className="iconify lucide--messages-square size-5 text-purple-600" />
                     </div> */}
-                    <h2 className="mb-2 text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
+                    <h2 className="text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
                     <p className="text-base-content/70 inline-block max-w-lg font-sans">
                         Questions Australian SMEs ask about <strong>data integration services</strong>, and{" "}
                         <strong>analytics consulting</strong>.

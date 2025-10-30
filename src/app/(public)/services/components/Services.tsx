@@ -169,11 +169,11 @@ export default function Services() {
                                                 className="btn btn-secondary cursor-pointer border-2 border-black font-semibold">
                                                 Get in touch
                                             </button>
-                                            {/* <a
-                                                href="/work/dfcrc-consultation"
+                                            <a
+                                                href="/insights/dfcrc-consultation"
                                                 className="btn btn-outline bg-base-100 text-base-content border-2 border-black">
-                                                Sample scope
-                                            </a> */}
+                                                View insights
+                                            </a>
                                         </div>
                                     </div>
 
@@ -294,7 +294,7 @@ export default function Services() {
                                 <motion.p
                                     variants={serviceChild}
                                     className="font-ocr text-base-content/60 text-[11px] tracking-[.18em] uppercase">
-                                    <span className="text-base-content/80">Workflow Automation</span>
+                                    <span className="text-base-content/80">Rev Ops & Automation</span>
                                 </motion.p>
 
                                 <motion.h2
@@ -320,9 +320,9 @@ export default function Services() {
                                                     Deliverables
                                                 </h3>
                                                 <ul className="mt-2 list-disc pl-5 text-sm md:text-base">
-                                                    <li>Operations specific workflows</li>
-                                                    <li>Automated invoice & finance reconciliation</li>
-                                                    <li>Onboarding & handover workflows</li>
+                                                    <li>CRM specific workflows</li>
+                                                    <li>ERP & finance reconciliation</li>
+                                                    <li>Sales & marketing workflows</li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -334,7 +334,7 @@ export default function Services() {
                                                     openContact({
                                                         initial: {
                                                             message:
-                                                                "Workflow Automation — 15-min fit call. Context: (systems, pain points, desired outcomes)",
+                                                                "Rev Ops & Automation — 15-min fit call. Context: (systems, pain points, desired outcomes)",
                                                         },
                                                     })
                                                 }
@@ -357,7 +357,7 @@ export default function Services() {
                             <motion.div variants={serviceChild}>
                                 <CaseStudy
                                     id="cs-automation"
-                                    label="Workflow Automation Case Study"
+                                    label="Revenue Operations Case Study"
                                     title="Quote → invoice → reconciliation"
                                     summary="A professional services firm required a way to onboard a customer on one platform, and automatically generate invoices, accounts and project management codes across other platforms."
                                     metrics={[

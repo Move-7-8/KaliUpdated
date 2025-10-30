@@ -24,7 +24,7 @@ const CASE_STUDIES: CaseStudy[] = [
         blurb: "Consultation for the role of AI in the future of digital finance",
         image: "/images/investors/dfcrc.png",
         headlineMetric: "",
-        href: "/services#consulting",
+        href: "/blog/dfcrc-case-study",
     },
     {
         id: "DigitalX",
@@ -34,7 +34,7 @@ const CASE_STUDIES: CaseStudy[] = [
         blurb: "Data unification and analytics software for investment management.",
         image: "/images/investors/digital.png",
         headlineMetric: "",
-        href: "/services#dashboards",
+        href: "/blog/digitalx-case-study",
     },
     {
         id: "Skimreader",
@@ -44,7 +44,7 @@ const CASE_STUDIES: CaseStudy[] = [
         blurb: "AI-powered reading tool startup.",
         image: "/images/investors/skimread.png",
         headlineMetric: "",
-        href: "/services#product-development",
+        href: "/blog/digitalx-case-study",
     },
 ];
 
@@ -63,7 +63,7 @@ function Stars() {
 export default function Results() {
     return (
         <section className="mx-auto w-[85%]">
-            <h2 className="mb-6 text-2xl font-semibold tracking-tight">Recent Case Studies</h2>
+            <h2 className="-mt-10 mb-6 text-2xl font-semibold tracking-tight">Recent Case Studies</h2>
 
             {/* Use spacing instead of dividers so the row border is clean */}
             <ul role="list" className="space-y-4">

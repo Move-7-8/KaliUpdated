@@ -8,9 +8,12 @@ export const frontmatter = {
     title: "How to Connect HubSpot and Xero (properly)",
     description:
         "Learn when to use an integration app vs. a custom integration, and find out the best way to run your own integration.",
-    date: "2025-10-06",
+    date: "2025-10-14",
     readingTime: "10 min",
     canonical: "https://www.kalisoftware.io/blog/hubspot-xero-australia-how-to",
+    cardImage: "/images/caseStudies/hubspot2.png",
+    cardImageAlt: "HubSpot ↔ Xero solution",
+
     author: {
         name: "Connor L",
         image: "/images/blogs/connor_lane.png",
