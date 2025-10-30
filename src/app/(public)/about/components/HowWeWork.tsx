@@ -21,12 +21,12 @@ export default function HowWeWork() {
         {
             num: "02",
             title: "Design",
-            desc: "Target architecture, data contracts, access. Scope finalised.",
+            desc: "Target architecture, access controls and data governance. Scope finalised.",
         },
         {
             num: "03",
             title: "Build",
-            desc: "Iterative delivery with demos.",
+            desc: "Iterative delivery with ongoing demos.",
         },
         {
             num: "04",

@@ -7,7 +7,7 @@ export default function PrivacyPolicy() {
             <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 lg:px-8">
                 <div className="mb-8 text-center">
                     <h1 className="font-heading text-4xl font-extrabold tracking-tight md:text-5xl">Privacy Policy</h1>
-                    <p className="mt-2 opacity-80">Effective date: 30 October 2025</p>
+                    <p className="mt-2 opacity-80">Effective date: 30 August 2025</p>
                 </div>
 
                 <div className="card bg-base-100 shadow-xl">
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
                                 <li>
                                     ASIC record:{" "}
                                     <a
-                                        className="link link-primary"
+                                        className="link link-primary-content"
                                         href="https://connectonline.asic.gov.au/"
                                         target="_blank"
                                         rel="noopener noreferrer">
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
                                 <strong>Kali Software (Kali Capital Pty Ltd)</strong>
                                 <br />
                                 Email:{" "}
-                                <a className="link link-primary" href="mailto:connor@kalicapital.io">
+                                <a className="link link-primary-content" href="mailto:connor@kalicapital.io">
                                     connor@kalicapital.io
                                 </a>
                             </p>

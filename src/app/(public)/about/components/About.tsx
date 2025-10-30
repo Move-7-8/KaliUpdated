@@ -65,7 +65,7 @@ export default function About() {
                         Have questions about data integration?
                     </h2>
                     <p className="mt-2 max-w-3xl opacity-90">
-                        Book a quick consult. We’ll map ROI, your key data sources, and any governance or privacy needs.
+                        Reach out to us. We’ll help you find the right solution for your business.
                     </p>
                     <div className="mt-5 flex flex-wrap gap-3">
                         <button
@@ -81,7 +81,7 @@ export default function About() {
                             className="btn btn-secondary cursor-pointer rounded-full border-2 border-black font-semibold shadow"
                             aria-haspopup="dialog"
                             aria-controls="contact-modal">
-                            Talk to an expert
+                            Get in touch
                         </button>
                         <Link
                             href="/services"

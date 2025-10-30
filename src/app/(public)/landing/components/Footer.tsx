@@ -67,11 +67,71 @@ export const Footer = () => {
                 </div>
 
                 <div className="border-base-300 mt-12 flex flex-col items-start justify-between gap-3 border-t py-6 text-sm md:flex-row md:items-center">
-                    <span>Kali Software. ACN 656 408 678</span>
-                    <div className="flex items-center gap-4">
+                    <div className="flex flex-col gap-1">
+                        <span>Kali Software. ACN 656 408 678</span>
+                        <address className="not-italic">
+                            <Link
+                                href="https://www.google.com/maps?q=333+George+St,+Sydney+NSW+2000"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="link link-hover">
+                                333 George St, Sydney NSW 2000
+                            </Link>
+                        </address>
+                    </div>
+
+                    <div className="flex items-center gap-4" aria-label="Footer links">
                         <Link href="/privacypolicy" className="link link-hover">
                             Privacy Policy
                         </Link>
+                        <span className="text-base-content/50 inline-block text-lg select-none" aria-hidden="true">
+                            ·
+                        </span>
+                        <Link href="/terms" className="link link-hover">
+                            Terms of Service
+                        </Link>
+
+                        <span className="text-base-content/50 inline-block text-lg select-none" aria-hidden="true">
+                            ·
+                        </span>
+
+                        {/* Social icons */}
+                        <div className="flex items-center gap-3" aria-label="Social links">
+                            <Link
+                                href="https://www.linkedin.com/company/kalisoftware"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Kali Software on LinkedIn"
+                                className="inline-flex h-7 w-7 items-center justify-center rounded-full transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    className="h-4 w-4"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M4.983 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.983 0ZM.5 8.25h4.966V24H.5V8.25Zm7.356 0h4.767v2.142h.066c.664-1.26 2.287-2.588 4.712-2.588 5.038 0 5.966 3.319 5.966 7.63V24h-4.966v-6.973c0-1.663-.03-3.8-2.316-3.8-2.318 0-2.673 1.81-2.673 3.683V24H7.856V8.25Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </Link>
+                            <Link
+                                href="https://x.com/kalisoftware_io"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Kali Software on X (Twitter)"
+                                className="inline-flex h-7 w-7 items-center justify-center rounded-full transition-opacity hover:opacity-80 focus:outline-none focus-visible:ring">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    className="h-4 w-4"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M18.244 2H21.5l-7.5 8.57L23 22h-6.18l-4.83-6.092L6.5 22H3.243l8.02-9.17L2.5 2h6.32l4.37 5.667L18.244 2Zm-1.08 18h1.69L7.92 4h-1.8l10.043 16Z"
+                                        fill="currentColor"
+                                    />
+                                </svg>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
