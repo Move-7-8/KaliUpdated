@@ -199,7 +199,7 @@ export default function Services() {
                                         "Built algorithms to enable investment decision making across boards ",
                                         "Partnered with researchers and industry via the DFCRC to deliver cutting edge software for financial services",
                                     ]}
-                                    ctaHref="/work/granny-flat-discovery"
+                                    ctaHref="/blog/dfcrc-case-study"
                                     ctaLabel="Open case study"
                                     image={{ src: "/images/caseStudies/dfcrc.png", alt: "Discovery outputs overview" }}
                                 />
