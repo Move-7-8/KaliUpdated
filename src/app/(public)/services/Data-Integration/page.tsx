@@ -1,14 +1,14 @@
-// src/app/services/hubspot-xero-integration/page.tsx
+// src/app/services/data-integration/page.tsx
 import type { Metadata } from "next";
 import Script from "next/script";
 
 import OurClients from "../../about/components/OurClients";
 import { Footer } from "../../landing/components/Footer";
 import { Topbar } from "../../landing/components/Topbar";
-import XeroIntegration from "./components/XeroIntegration";
+import DataIntegration from "./components/DataIntegration";
 
 const SITE_URL = "https://www.kalisoftware.io";
-const SERVICE_PATH = "/services/hubspot-xero-integration";
+const SERVICE_PATH = "/services/data-integration";
 const SERVICE_URL = `${SITE_URL}${SERVICE_PATH}`;
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     // Ensures relative URLs (e.g., in images) resolve correctly.
     metadataBase: new URL(SITE_URL),
 
-    title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+    title: "Data Integration (Australia): ODS, ELT Pipelines & Trusted Analytics",
     description:
-        "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+        "Data integration for Australian SMEs—stand up an Operational Data Store, build reliable ELT pipelines, and sync clean data to your CRM, finance, and BI tools.",
     alternates: {
         canonical: SERVICE_URL,
     },
 
     // --- Open Graph (Facebook/LinkedIn/Slack/etc.)
     openGraph: {
-        title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+        title: "Data Integration (Australia): ODS, ELT Pipelines & Trusted Analytics",
         description:
-            "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+            "Data integration for Australian SMEs—stand up an Operational Data Store, build reliable ELT pipelines, and sync clean data to your CRM, finance, and BI tools.",
         url: SERVICE_URL,
         siteName: "Kali Software",
         locale: "en_AU",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
                 url: OG_IMAGE, // absolute URL recommended
                 width: 1200,
                 height: 630,
-                alt: "HubSpot ↔ Xero Integration for Australian SMEs",
+                alt: "Operational Data Store & ELT pipelines for Australian SMEs",
                 type: "image/png",
             },
         ],
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     // --- Twitter cards
     twitter: {
         card: "summary_large_image",
-        title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+        title: "Data Integration (Australia): ODS, ELT Pipelines & Trusted Analytics",
         description:
-            "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+            "Data integration for Australian SMEs—stand up an Operational Data Store, build reliable ELT pipelines, and sync clean data to your CRM, finance, and BI tools.",
         // If you have a Twitter handle, you can add:
         // site: "@yourhandle",
         // creator: "@yourhandle",
@@ -63,11 +63,11 @@ const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": SERVICE_URL + "#service",
-    name: "HubSpot Xero Integration (Australia)",
-    serviceType: "HubSpot Xero Integration",
+    name: "Data Integration (Australia)",
+    serviceType: "Data Integration",
     url: SERVICE_URL,
     description:
-        "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status back to HubSpot.",
+        "Design and implement an Operational Data Store (ODS) with reliable ELT pipelines to unify SaaS and database sources, ensure data quality, and publish trusted datasets to downstream systems.",
     areaServed: { "@type": "Country", name: "AU" },
     audience: { "@type": "BusinessAudience", name: "Australian SMEs" },
     provider: { "@id": ORG_ID },
@@ -86,48 +86,48 @@ const faqLd = {
     mainEntity: [
         {
             "@type": "Question",
-            name: "How long does a typical integration take?",
+            name: "How long does a typical data integration take?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Most projects ship in 4–6 weeks: discovery, prototype, testing, then rolling out live. Additional integrations can be added faster as the ODS (source of truth database) is already set up.",
+                text: "Most projects ship in 4–6 weeks: discovery, prototype, testing, then rolling out live. Subsequent sources and models go faster once the ODS and patterns are in place.",
             },
         },
         {
             "@type": "Question",
-            name: "Do you handle GST, Tracking Categories, and multi-entity?",
+            name: "What tools and platforms do you support?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. We map GST (incl./excl.), apply Tracking Categories (e.g., Region/Dept), and support multiple Xero orgs/brands with routing rules in the ODS.",
+                text: "We integrate SaaS apps and databases into an ODS/warehouse and can work with tools such as Airbyte/Fivetran, dbt, and orchestrators. We also build bespoke connectors for edge cases.",
             },
         },
         {
             "@type": "Question",
-            name: "Will payment status land back in HubSpot automatically?",
+            name: "Can you push curated data back into my operational tools?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "We write Sent / Part-Paid / Paid / Overdue and Payment Date to Deal properties with retries and idempotency, so Sales has a live view without asking Finance.",
+                text: "Yes. We publish modeled, trusted data back to CRMs, finance systems, and other apps with idempotent writes, retries, and auditing so teams get consistent, current information.",
             },
         },
         {
             "@type": "Question",
-            name: "Can you push HubSpot Quotes into Xero and keep line-item data?",
+            name: "How do you handle data quality and schema changes?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Absolutely. Quotes convert to Xero draft/authorised invoices with line items, tax, SKUs, and Tracking preserved. Enter information once, and ensure it flows to every place it needs to go.",
+                text: "We validate inputs, track lineage, and add tests/alerts for freshness and nulls. Schema drift is managed via versioned models and guarded rollouts to avoid breaking downstream consumers.",
             },
         },
         {
             "@type": "Question",
-            name: "What happens if data changes or something fails mid-sync?",
+            name: "What happens if a sync fails or data changes mid-run?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "The ODS keeps state and every write is auditable. We validate inputs, retry safely without duplicates, and surface human-readable errors in HubSpot.",
+                text: "The ODS keeps state and every write is auditable. We retry safely without duplicates and surface human-readable errors, with runbooks for remediation.",
             },
         },
     ],
 };
 
-export default function HubSpotXeroIntegrationPage() {
+export default function DataIntegrationPage() {
     return (
         <>
             {/* Structured data */}
@@ -144,7 +144,7 @@ export default function HubSpotXeroIntegrationPage() {
 
             {/* <Topbar /> */}
             <div className="bg-base-200">
-                <XeroIntegration />
+                <DataIntegration />
                 <div className="mx-auto max-w-10/12">
                     <OurClients />
                 </div>

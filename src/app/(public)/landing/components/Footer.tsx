@@ -68,7 +68,10 @@ export const Footer = () => {
 
                 <div className="border-base-300 mt-12 flex flex-col items-start justify-between gap-3 border-t py-6 text-sm md:flex-row md:items-center">
                     <div className="flex flex-col gap-1">
-                        <span>Kali Software. ACN 656 408 678</span>
+                        <span>
+                            Kali Software Pty Ltd. <br />
+                            ACN 656 408 678
+                        </span>
                         <address className="not-italic">
                             <Link
                                 href="https://www.google.com/maps?q=333+George+St,+Sydney+NSW+2000"

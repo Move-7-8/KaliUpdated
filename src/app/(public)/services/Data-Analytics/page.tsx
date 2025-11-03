@@ -1,14 +1,14 @@
-// src/app/services/hubspot-xero-integration/page.tsx
+// src/app/services/data-analytics/page.tsx
 import type { Metadata } from "next";
 import Script from "next/script";
 
 import OurClients from "../../about/components/OurClients";
 import { Footer } from "../../landing/components/Footer";
 import { Topbar } from "../../landing/components/Topbar";
-import XeroIntegration from "./components/XeroIntegration";
+import DataAnalytics from "./components/DataAnalytics";
 
 const SITE_URL = "https://www.kalisoftware.io";
-const SERVICE_PATH = "/services/hubspot-xero-integration";
+const SERVICE_PATH = "/services/data-analytics";
 const SERVICE_URL = `${SITE_URL}${SERVICE_PATH}`;
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     // Ensures relative URLs (e.g., in images) resolve correctly.
     metadataBase: new URL(SITE_URL),
 
-    title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+    title: "Data Analytics (Australia): KPI Models, Dashboards & Decision Support",
     description:
-        "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+        "Data analytics for Australian SMEs—define KPIs, build a semantic layer, and deliver reliable dashboards and decision support across the business.",
     alternates: {
         canonical: SERVICE_URL,
     },
 
     // --- Open Graph (Facebook/LinkedIn/Slack/etc.)
     openGraph: {
-        title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+        title: "Data Analytics (Australia): KPI Models, Dashboards & Decision Support",
         description:
-            "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
+            "Data analytics for Australian SMEs—define KPIs, build a semantic layer, and deliver reliable dashboards and decision support across the business.",
         url: SERVICE_URL,
         siteName: "Kali Software",
         locale: "en_AU",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
                 url: OG_IMAGE, // absolute URL recommended
                 width: 1200,
                 height: 630,
-                alt: "HubSpot ↔ Xero Integration for Australian SMEs",
+                alt: "Reliable KPI models and dashboards for Australian SMEs",
                 type: "image/png",
             },
         ],
@@ -49,13 +49,12 @@ export const metadata: Metadata = {
     // --- Twitter cards
     twitter: {
         card: "summary_large_image",
-        title: "HubSpot Xero Integration (Australia): GST, Tracking Categories & Deal → Invoice",
+        title: "Data Analytics (Australia): KPI Models, Dashboards & Decision Support",
         description:
-            "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status to HubSpot.",
-        // If you have a Twitter handle, you can add:
+            "Data analytics for Australian SMEs—define KPIs, build a semantic layer, and deliver reliable dashboards and decision support across the business.",
         // site: "@yourhandle",
         // creator: "@yourhandle",
-        images: [OG_IMAGE], // can be absolute or relative when metadataBase is set
+        images: [OG_IMAGE],
     },
 };
 
@@ -63,11 +62,11 @@ const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": SERVICE_URL + "#service",
-    name: "HubSpot Xero Integration (Australia)",
-    serviceType: "HubSpot Xero Integration",
+    name: "Data Analytics (Australia)",
+    serviceType: "Data Analytics",
     url: SERVICE_URL,
     description:
-        "HubSpot Xero integration for Australian SMEs—create invoices from deals, map GST & Tracking Categories, and sync payment status back to HubSpot.",
+        "Design KPI definitions, model metrics in a semantic layer, and deliver fast, trustworthy dashboards and decision support for go-to-market, finance, and operations.",
     areaServed: { "@type": "Country", name: "AU" },
     audience: { "@type": "BusinessAudience", name: "Australian SMEs" },
     provider: { "@id": ORG_ID },
@@ -86,48 +85,48 @@ const faqLd = {
     mainEntity: [
         {
             "@type": "Question",
-            name: "How long does a typical integration take?",
+            name: "How long does a typical analytics engagement take?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Most projects ship in 4–6 weeks: discovery, prototype, testing, then rolling out live. Additional integrations can be added faster as the ODS (source of truth database) is already set up.",
+                text: "Most projects ship in 4–6 weeks: discovery, KPI design, prototype dashboards, testing, then rolling out live. Further domains and metrics are faster once the semantic layer is in place.",
             },
         },
         {
             "@type": "Question",
-            name: "Do you handle GST, Tracking Categories, and multi-entity?",
+            name: "Which BI tools and platforms do you support?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. We map GST (incl./excl.), apply Tracking Categories (e.g., Region/Dept), and support multiple Xero orgs/brands with routing rules in the ODS.",
+                text: "We work with Looker/Looker Studio, Power BI, Metabase, and Superset. We also model metrics with dbt/semantic layers and support common warehouses.",
             },
         },
         {
             "@type": "Question",
-            name: "Will payment status land back in HubSpot automatically?",
+            name: "Can you build a governed metric layer so KPIs are consistent?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "We write Sent / Part-Paid / Paid / Overdue and Payment Date to Deal properties with retries and idempotency, so Sales has a live view without asking Finance.",
+                text: "Yes. We define KPIs once and expose them consistently across dashboards and teams. Changes are versioned and rolled out safely.",
             },
         },
         {
             "@type": "Question",
-            name: "Can you push HubSpot Quotes into Xero and keep line-item data?",
+            name: "How do you handle data freshness and quality?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Absolutely. Quotes convert to Xero draft/authorised invoices with line items, tax, SKUs, and Tracking preserved. Enter information once, and ensure it flows to every place it needs to go.",
+                text: "We set freshness targets, add tests for nulls and referential integrity, and surface data-status in dashboards so users trust the numbers.",
             },
         },
         {
             "@type": "Question",
-            name: "What happens if data changes or something fails mid-sync?",
+            name: "What happens when a source or metric changes?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "The ODS keeps state and every write is auditable. We validate inputs, retry safely without duplicates, and surface human-readable errors in HubSpot.",
+                text: "We manage drift with versioned models, clearly communicated changes, and checks to ensure downstream consumers don’t break unexpectedly.",
             },
         },
     ],
 };
 
-export default function HubSpotXeroIntegrationPage() {
+export default function DataAnalyticsPage() {
     return (
         <>
             {/* Structured data */}
@@ -144,7 +143,7 @@ export default function HubSpotXeroIntegrationPage() {
 
             {/* <Topbar /> */}
             <div className="bg-base-200">
-                <XeroIntegration />
+                <DataAnalytics />
                 <div className="mx-auto max-w-10/12">
                     <OurClients />
                 </div>

@@ -44,7 +44,7 @@ const CASE_STUDIES: CaseStudy[] = [
         blurb: "AI-powered reading tool startup.",
         image: "/images/investors/skimread.png",
         headlineMetric: "",
-        href: "/blog/digitalx-case-study",
+        href: "/blog/skimreader-ai-case-study",
     },
 ];
 
@@ -68,7 +68,15 @@ export default function Results() {
             {/* Use spacing instead of dividers so the row border is clean */}
             <ul role="list" className="space-y-4">
                 {CASE_STUDIES.map((c) => (
-                    <li key={c.id} className="bg-base-300 rounded-lg border border-black px-4 py-5">
+                    <li
+                        key={c.id}
+                        className={[
+                            "bg-base-300", // keep your original background
+                            "rounded-[20px]", // match services dropdown frame radius
+                            "border-2 border-black", // match thickness
+                            "px-4 py-5",
+                            "shadow-[3px_3px_0_#000]", // same drop shadow as services dropdown
+                        ].join(" ")}>
                         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                             <div className="shrink-0">
                                 <Image
@@ -76,7 +84,7 @@ export default function Results() {
                                     alt={`${c.client} case study`}
                                     width={160}
                                     height={100}
-                                    className={`${c.id === "Skimreader" ? "" : "logo-black"} rounded-md object-cover`}
+                                    className={`${c.id === "Skimreader" ? "" : "logo-black"} rounded-[12px] object-cover`}
                                 />
                             </div>
 

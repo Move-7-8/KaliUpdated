@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useCallback } from "react";
 
 import HowWeWork from "./HowWeWork";
+import OurClients from "./OurClients";
 import OurStory from "./OurStory";
 
 export default function About() {
@@ -22,10 +23,9 @@ export default function About() {
                     Australian businesses need their data to make sense.
                 </h1>
                 <p className="mt-4 max-w-3xl text-lg opacity-90 md:text-xl">
-                    Off-the-shelf tools are too blunt for the reality of your finance, sales, ops and marketing stacks.
-                    We take a consulting mindset to design <em>fit-for-purpose</em> data integrations, models and
-                    dashboards. This way, leaders get trusted metrics, teams spend less time reconciling, and decisions
-                    move faster.
+                    Off-the-shelf tools are too blunt for the reality of your finance, sales, ops and marketing. We take
+                    a consulting mindset to design <em>fit-for-purpose</em> data integrations, models and dashboards.
+                    This way, leaders get trusted metrics, teams spend less time reconciling, and decisions move faster.
                 </p>
 
                 {/* <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
@@ -58,6 +58,8 @@ export default function About() {
             {/* How We Work (process + timelines/SLAs/tools/handover) */}
             <HowWeWork />
 
+            {/* Our Clients */}
+            <OurClients />
             {/* CTA */}
             <section className="mx-auto max-w-6xl px-4 pt-6 pb-16 md:px-6 lg:px-8">
                 <div className="bg-primary text-primary-content rounded-3xl border-2 border-black p-6 shadow md:p-8">

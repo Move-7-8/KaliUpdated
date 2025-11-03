@@ -42,7 +42,7 @@ export default function HowWeWork() {
 
     return (
         <section className="mx-auto max-w-6xl px-4 py-8 md:px-6 lg:px-8">
-            <h2 className="font-ocr text-3xl font-extrabold tracking-tight md:text-4xl">How we work</h2>
+            <h2 className="font-ocr text-2xl font-extrabold tracking-tight md:text-3xl">How we work</h2>
 
             {/* Process */}
             <motion.div
