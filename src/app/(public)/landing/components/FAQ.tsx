@@ -158,7 +158,7 @@ export const FAQ = () => {
     };
 
     return (
-        <section className="mx-auto w-[85%] py-8 md:py-12 xl:py-16 2xl:py-24" id="faqs">
+        <section className="mx-auto mt-10 w-[85%] py-8 md:py-12 xl:py-16 2xl:py-24" id="faqs">
             <Script
                 id="faq-schema"
                 type="application/ld+json"
@@ -166,7 +166,7 @@ export const FAQ = () => {
             />
 
             {/* Stacked layout: header on top, dropdowns below */}
-            <div className="flex flex-col gap-12 lg:gap-16">
+            <div className="flex flex-col gap-6">
                 <div>
                     {/* <div className="inline-flex items-center rounded border border-purple-500/10 bg-purple-500/5 p-2">
                         <span className="iconify lucide--messages-square size-5 text-purple-600" />
