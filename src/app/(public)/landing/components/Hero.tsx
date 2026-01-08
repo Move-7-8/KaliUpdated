@@ -90,7 +90,7 @@ export const Hero = () => {
             <div className="hero-content relative z-20 container px-4 py-20 text-center sm:px-6 sm:py-24 sm:text-left lg:px-10 lg:py-28 xl:py-32">
                 <div className="mx-auto flex w-full max-w-6xl flex-col items-center sm:items-start">
                     <h1 className="hero-h1 max-w-5xl [font-family:var(--font-display)] text-4xl leading-[0.95] font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl">
-                        <span className="line block">Data Consulting</span>
+                        <span className="line block">Web and Data Consulting</span>
                         <span className="line block">for Australian Businesses</span>
                     </h1>
 
