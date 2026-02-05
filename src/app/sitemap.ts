@@ -36,6 +36,36 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
             changeFrequency: "weekly",
             priority: 0.9,
         },
+        {
+            url: `${base}/services/AI-Solutions`,
+            lastModified: nowIso,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${base}/services/Data-Integration`,
+            lastModified: nowIso,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${base}/services/Data-Analytics`,
+            lastModified: nowIso,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${base}/services/Revenue-Operations`,
+            lastModified: nowIso,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
+        {
+            url: `${base}/services/Digital`,
+            lastModified: nowIso,
+            changeFrequency: "monthly",
+            priority: 0.8,
+        },
     ];
 
     // 2) Blog posts — Markdown + TSX

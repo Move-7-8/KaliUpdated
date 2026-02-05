@@ -1,13 +1,13 @@
-// src/app/services/digital/page.tsx
+// src/app/services/AI-Solutions/page.tsx
 import type { Metadata } from "next";
 import Script from "next/script";
 
 import OurClients from "../../about/components/OurClients";
 import { Footer } from "../../landing/components/Footer";
-import Digital from "./components/Digital";
+import AISolutions from "./components/AISolutions";
 
 const SITE_URL = "https://www.kalisoftware.io";
-const SERVICE_PATH = "/services/digital";
+const SERVICE_PATH = "/services/AI-Solutions";
 const SERVICE_URL = `${SITE_URL}${SERVICE_PATH}`;
 const ORG_ID = `${SITE_URL}/#organization`;
 
@@ -15,14 +15,14 @@ const OG_IMAGE = `${SITE_URL}/images/og/image.png`;
 
 export const metadata: Metadata = {
     metadataBase: new URL(SITE_URL),
-    title: "Next.js Web Apps (Australia): Design, Build & Integrations",
+    title: "AI Solutions (Australia): Multi-Agent Systems, RAG & LLM Integration",
     description:
-        "Design and build production-grade Next.js web apps for Australian teams—fast UX, clean component systems, robust APIs, and reliable integrations.",
+        "Enterprise AI that works—multi-agent orchestration, RAG & semantic search, LLM integration, and evaluation frameworks for Australian businesses.",
     alternates: { canonical: SERVICE_URL },
     openGraph: {
-        title: "Next.js Web Apps (Australia): Design, Build & Integrations",
+        title: "AI Solutions (Australia): Multi-Agent Systems, RAG & LLM Integration",
         description:
-            "Design and build production-grade Next.js web apps for Australian teams—fast UX, clean component systems, robust APIs, and reliable integrations.",
+            "Enterprise AI that works—multi-agent orchestration, RAG & semantic search, LLM integration, and evaluation frameworks for Australian businesses.",
         url: SERVICE_URL,
         siteName: "Kali Software",
         locale: "en_AU",
@@ -32,16 +32,16 @@ export const metadata: Metadata = {
                 url: OG_IMAGE,
                 width: 1200,
                 height: 630,
-                alt: "Next.js web apps for Australian teams",
+                alt: "AI Solutions for Australian businesses",
                 type: "image/png",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "Next.js Web Apps (Australia): Design, Build & Integrations",
+        title: "AI Solutions (Australia): Multi-Agent Systems, RAG & LLM Integration",
         description:
-            "Design and build production-grade Next.js web apps for Australian teams—fast UX, clean component systems, robust APIs, and reliable integrations.",
+            "Enterprise AI that works—multi-agent orchestration, RAG & semantic search, LLM integration, and evaluation frameworks for Australian businesses.",
         images: [OG_IMAGE],
     },
 };
@@ -52,18 +52,18 @@ const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",
     "@id": SERVICE_URL + "#service",
-    name: "Next.js Web Apps (Australia)",
-    serviceType: "Web Application Development",
+    name: "AI Solutions (Australia)",
+    serviceType: "Artificial Intelligence Development",
     url: SERVICE_URL,
     description:
-        "Plan, design, and deliver modern Next.js applications with accessible UX, strong performance, clean component systems, and reliable integrations.",
+        "Build production-ready AI systems including multi-agent orchestration, RAG pipelines, LLM integration, and evaluation frameworks for Australian businesses.",
     areaServed: { "@type": "Country", name: "AU" },
-    audience: { "@type": "BusinessAudience", name: "Australian product & marketing teams" },
+    audience: { "@type": "BusinessAudience", name: "Australian product & enterprise teams" },
     provider: { "@id": ORG_ID },
     offers: {
         "@type": "Offer",
         priceCurrency: "AUD",
-        price: "10000",
+        price: "15000",
         url: SERVICE_URL,
         availability: "https://schema.org/InStock",
     },
@@ -75,48 +75,48 @@ const faqLd = {
     mainEntity: [
         {
             "@type": "Question",
-            name: "How long does a typical Next.js build take?",
+            name: "What AI services do you offer?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Most projects ship in 4–6 weeks: discovery, UX/IA, component system, integrations, testing, and launch. Post-launch iterations continue on a roadmap.",
+                text: "We build multi-agent systems, RAG pipelines with semantic search, LLM integration and deployment, and evaluation frameworks with guardrails for safe, reliable AI.",
             },
         },
         {
             "@type": "Question",
-            name: "What’s included in the build?",
+            name: "What is RAG and how can it help my business?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Design system, routes and pages, forms and validation, authentication, API integration, performance and accessibility passes, analytics, and CI/CD.",
+                text: "RAG (Retrieval-Augmented Generation) connects LLMs to your private data—documents, databases, or APIs—so AI can answer questions grounded in your specific context with citations.",
             },
         },
         {
             "@type": "Question",
-            name: "How do you ensure performance and SEO?",
+            name: "How do you ensure AI systems are safe?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "We ship fast by default: server components where sensible, caching and revalidation, image optimisation, clean HTML semantics, and structured metadata.",
+                text: "We implement guardrails, automated evaluation suites, human-in-the-loop review for sensitive actions, and observability to monitor outputs, latency, and costs in production.",
             },
         },
         {
             "@type": "Question",
-            name: "Can you integrate with our existing systems?",
+            name: "Can you integrate AI with our existing systems?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. We connect CRMs, auth providers, data APIs, and back-office tools with idempotent writes, rate-limit handling, and resilient retries.",
+                text: "Yes. We connect AI pipelines to your CRMs, databases, APIs, and internal tools with proper auth, error handling, and audit trails.",
             },
         },
         {
             "@type": "Question",
-            name: "Do you provide handover and support?",
+            name: "How long does an AI project typically take?",
             acceptedAnswer: {
                 "@type": "Answer",
-                text: "Yes. We document the component library and workflows, set up CI/CD and environments, and provide runbooks for changes and incident response.",
+                text: "Timelines vary by complexity. A focused proof-of-concept can be delivered quickly, while production systems with full evaluation and integration take longer. We scope each project individually.",
             },
         },
     ],
 };
 
-export default function DigitalPage() {
+export default function AISolutionsPage() {
     return (
         <>
             <Script
@@ -131,7 +131,7 @@ export default function DigitalPage() {
             />
 
             <div className="bg-base-200">
-                <Digital />
+                <AISolutions />
                 <div className="mx-auto max-w-10/12">
                     <OurClients />
                 </div>

@@ -5,7 +5,7 @@ import Link from "next/link";
 export const frontmatter = {
     title: "Skimreader.ai Product Build Case Study",
     description:
-        "How we designed and shipped Skimreader.ai — an AI-powered eReader that summarizes textbooks and articles as you read, with page-level quizzes and note exports.",
+        "How we designed and shipped Skimreader.ai — an AI-powered eReader that summarises textbooks and articles as you read, with page-level quizzes and note exports.",
     date: "2025-10-01",
     readingTime: "5 min",
     canonical: "https://www.kalisoftware.io/blog/skimreader-ai-case-study",
@@ -28,7 +28,7 @@ export default function Post() {
             {/* CASE SNAPSHOT / WHAT YOU'LL LEARN */}
             <blockquote>
                 <p>
-                    Skimreader.ai is an AI-powered eReader that summarizes and helps you learn textbooks and long-form
+                    Skimreader.ai is an AI-powered eReader that summarises and helps you learn textbooks and long-form
                     articles while you read — with page-level quizzes that reinforce recall and quick note export for
                     revision. The product proposition: save hours per week and improve retention for students and
                     researchers, directly inside a distraction-free reader.
@@ -51,7 +51,7 @@ export default function Post() {
                     <span role="img" aria-label="bullet point" className="mr-2">
                         •
                     </span>
-                    “Summarize while you read” flow with page-level concepts, questions and quick reviews.
+                    “Summarise while you read” flow with page-level concepts, questions and quick reviews.
                 </li>
                 <li>
                     <span role="img" aria-label="bullet point" className="mr-2">

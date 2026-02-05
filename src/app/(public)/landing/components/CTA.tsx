@@ -26,7 +26,7 @@ export const CTA = () => {
                     </li>
                     <li className="flex items-center gap-2 max-sm:text-sm">
                         <span className="iconify lucide--badge-check size-6 text-green-500"></span>
-                        Fully responsive & optimized for all devices
+                        Fully responsive & optimised for all devices
                     </li>
                 </ul>
             </div>

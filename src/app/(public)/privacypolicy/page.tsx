@@ -7,7 +7,12 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 export const metadata = {
     title: "Privacy Policy - Kali Software",
     description: "Privacy Policy for Kali Software (Kali Capital Pty Ltd).",
+    alternates: {
+        canonical: "https://www.kalisoftware.io/privacypolicy",
+    },
 };
+
+export const revalidate = 86400;
 
 export default function PrivacyPolicyPage() {
     return (

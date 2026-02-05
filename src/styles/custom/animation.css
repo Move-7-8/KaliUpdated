@@ -25,8 +25,19 @@
 }
 
 .animated-text {
-    @apply animate-text-color;
     background-size: 400% 400%;
     background-clip: text;
     color: transparent;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .animated-text {
+        @apply animate-text-color;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animated-text {
+        animation: none;
+    }
 }

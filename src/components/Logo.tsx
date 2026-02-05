@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type ILogo = {
     className?: string;
 };
@@ -5,12 +7,22 @@ type ILogo = {
 export const Logo = ({ className }: ILogo) => {
     return (
         <>
-            <img
+            <Image
                 src="/images/logo/logo-dark.png"
-                alt="logo-dark"
-                className={`hidden h-5 dark:inline ${className ?? ""}`}
+                alt="Kali Software logo"
+                width={200}
+                height={40}
+                className={`hidden h-5 w-auto dark:inline ${className ?? ""}`}
+                priority
             />
-            <img src="/images/logo/logo-light.png" alt="logo-light" className={`h-5 dark:hidden ${className ?? ""}`} />
+            <Image
+                src="/images/logo/logo-light.png"
+                alt="Kali Software logo"
+                width={200}
+                height={40}
+                className={`h-5 w-auto dark:hidden ${className ?? ""}`}
+                priority
+            />
         </>
     );
 };

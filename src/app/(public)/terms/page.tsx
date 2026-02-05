@@ -6,8 +6,13 @@ import TermsOfService from "./components/TermsOfService";
 
 export const metadata = {
     title: "Terms of Service - Kali Software",
-    description: "Terms governing the use of Kali Software’s website and professional services (Kali Capital Pty Ltd).",
+    description: "Terms governing the use of Kali Software's website and professional services (Kali Capital Pty Ltd).",
+    alternates: {
+        canonical: "https://www.kalisoftware.io/terms",
+    },
 };
+
+export const revalidate = 86400;
 
 export default function TermsOfServicePage() {
     return (

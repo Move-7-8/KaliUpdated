@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 type LogoItem = {
@@ -124,12 +125,13 @@ const LogoMarquee: React.FC<LogoMarqueeProps> = ({
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="block px-3 py-2 opacity-85 transition-opacity hover:opacity-100">
-                                        <img
+                                        <Image
                                             src={item.src}
                                             alt={item.alt}
-                                            className={`${excludeBlack ? "" : "logo-black"} h-8 object-contain sm:h-10`}
-                                            loading={i < LOGOS.length ? "eager" : "lazy"}
-                                            decoding="async"
+                                            width={120}
+                                            height={40}
+                                            className={`${excludeBlack ? "" : "logo-black"} h-8 w-auto object-contain sm:h-10`}
+                                            priority={i < LOGOS.length}
                                         />
                                     </a>
                                 </li>

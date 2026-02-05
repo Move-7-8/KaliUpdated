@@ -9,6 +9,7 @@ import { Logo } from "@/components/Logo";
 // --- Services lists (edit here to add/remove pages) ---
 type ServiceLink = { label: string; href: string };
 const CORE_SERVICES: ServiceLink[] = [
+    { label: "AI Solutions", href: "/services/AI-Solutions" },
     { label: "Data Integration", href: "/services/Data-Integration" },
     { label: "Data Analytics", href: "/services/Data-Analytics" },
     { label: "Revenue Operations", href: "/services/Revenue-Operations" },
@@ -116,7 +117,7 @@ export const Topbar = () => {
                                 <div className="drawer-content">
                                     <label
                                         htmlFor="demo-drawer"
-                                        className="btn drawer-button btn-ghost btn-square btn-sm">
+                                        className="btn drawer-button btn-ghost btn-square min-h-[44px] min-w-[44px]">
                                         <span className="iconify lucide--menu size-4.5" />
                                     </label>
                                 </div>
@@ -194,7 +195,7 @@ export const Topbar = () => {
                     </div>
 
                     <div className="hidden items-center gap-3 lg:flex">
-                        <Link href="/about" className="btn btn-ghost btn-sm">
+                        <Link href="/about" className="btn btn-ghost min-h-[44px]">
                             About
                         </Link>
 
@@ -204,7 +205,7 @@ export const Topbar = () => {
                                 href="/services"
                                 aria-haspopup="menu"
                                 aria-expanded={servicesOpen}
-                                className="btn btn-ghost btn-sm inline-flex items-center"
+                                className="btn btn-ghost min-h-[44px] inline-flex items-center"
                                 onMouseEnter={openMenu}>
                                 Services
                                 <span className="iconify lucide--chevron-down ml-1 size-4" />
@@ -294,14 +295,14 @@ export const Topbar = () => {
                             </AnimatePresence>
                         </div>
 
-                        <Link href="/blog" className="btn btn-ghost btn-sm">
+                        <Link href="/blog" className="btn btn-ghost min-h-[44px]">
                             Insights
                         </Link>
 
                         <button
                             type="button"
                             onClick={() => openContact()}
-                            className="btn btn-secondary btn-sm cursor-pointer rounded-full border-2 border-black">
+                            className="btn btn-secondary min-h-[44px] cursor-pointer rounded-full border-2 border-black">
                             Contact
                         </button>
                     </div>

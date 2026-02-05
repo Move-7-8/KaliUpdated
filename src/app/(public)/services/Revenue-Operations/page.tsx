@@ -58,6 +58,8 @@ export const metadata: Metadata = {
     },
 };
 
+export const revalidate = 86400;
+
 const serviceLd = {
     "@context": "https://schema.org",
     "@type": "Service",

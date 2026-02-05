@@ -35,7 +35,7 @@ export default function HowWeWork() {
         },
         {
             num: "05",
-            title: "Optimize",
+            title: "Optimise",
             desc: "Ongoing maintenance, improvements, and advice.",
         },
     ];

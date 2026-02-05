@@ -16,8 +16,29 @@ import { Testimonial } from "./landing/components/Testimonial";
 import { Topbar } from "./landing/components/Topbar";
 
 export const metadata: Metadata = {
-    title: "Software & Automation Services",
+    title: "Kali Software | AI & Data Solutions for Australian Businesses",
+    description:
+        "Enterprise AI, data integration, and analytics consulting for Australian businesses. Multi-agent systems, RAG, semantic search, and custom software.",
+    alternates: {
+        canonical: "https://www.kalisoftware.io/",
+    },
+    openGraph: {
+        title: "Kali Software | AI & Data Solutions",
+        description:
+            "Enterprise AI, data integration, and analytics consulting for Australian businesses. Multi-agent systems, RAG, semantic search, and custom software.",
+        url: "https://www.kalisoftware.io/",
+        images: [{ url: "/images/og/image.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Kali Software | AI & Data Solutions",
+        description:
+            "Enterprise AI, data integration, and analytics consulting for Australian businesses.",
+        images: ["/images/og/image.png"],
+    },
 };
+
+export const revalidate = 86400;
 
 const LandingPage = () => {
     return (

@@ -51,7 +51,7 @@ const features = [
     },
     {
         icon: "lucide--pencil-line",
-        title: "Fully Customizable",
+        title: "Fully Customisable",
         description: "Boost creativity with tools that bring your ideas to life.",
         iconClass: "text-violet-500 bg-violet-500/5",
         cardClass: "hover:border-violet-500/40 hover:bg-violet-500/5",
@@ -65,9 +65,9 @@ export const Features = () => {
                 <div className="inline-flex items-center rounded border border-indigo-500/10 bg-indigo-500/5 p-2">
                     <span className="iconify lucide--wand-2 size-5 text-indigo-600" />
                 </div>
-                <p id="fade-in" className="custom-fade-in mt-4 text-3xl font-semibold">
+                <h2 id="fade-in" className="custom-fade-in mt-4 text-3xl font-semibold">
                     Transform Your Journey
-                </p>
+                </h2>
                 <p className="text-base-content/70 mt-3 inline-block max-w-lg">
                     Discover the perfect blend of intuitive design and engaging visuals that will elevate your
                     experience at every turn.

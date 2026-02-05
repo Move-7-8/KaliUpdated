@@ -25,6 +25,7 @@ const registry: Record<string, () => Promise<TsxPostModule>> = {
     "dfcrc-case-study": () => asPost(import("./dfcrc-case-study")),
     "digitalx-case-study": () => asPost(import("./digitalx-case-study")),
     "skimreader-ai-case-study": () => asPost(import("./skimreader-ai-case-study")),
+    "multi-agent-systems": () => asPost(import("./multi-agent-systems")),
 };
 
 export const tsxSlugs = Object.keys(registry);

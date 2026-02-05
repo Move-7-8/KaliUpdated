@@ -85,8 +85,6 @@ export const metadata: Metadata = {
     viewport: {
         width: "device-width",
         initialScale: 1,
-        maximumScale: 1,
-        userScalable: false,
         viewportFit: "cover",
     },
 };
@@ -97,8 +95,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <head>
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
-                {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-                <script type="text/javascript" src="/js/prefetch-config.js"></script>
+                <link
+                    rel="preload"
+                    as="font"
+                    type="font/woff2"
+                    href="/fonts/EurostileExtended-Roman.woff2"
+                    crossOrigin="anonymous"
+                />
+                <link
+                    rel="preload"
+                    as="font"
+                    type="font/woff2"
+                    href="/fonts/OCR.woff2"
+                    crossOrigin="anonymous"
+                />
+                <Script src="/js/prefetch-config.js" strategy="afterInteractive" />
 
                 {/* Minimal Organization JSON-LD for richer brand results */}
                 <script

@@ -259,7 +259,7 @@ export const Showcase = () => {
                                             <img
                                                 src="/images/landing/showcase-card-image.png"
                                                 className="rounded-box mt-3"
-                                                alt="card"
+                                                alt="Example dashboard visualization showing data analytics components"
                                             />
                                             <p className="text-base-content/80 mt-0.5 text-center text-xs italic">
                                                 Image caption

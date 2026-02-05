@@ -45,6 +45,8 @@ export const metadata: Metadata = {
     },
 };
 
+export const revalidate = 86400;
+
 export default function ServicesPage() {
     // BreadcrumbList JSON-LD
     const breadcrumbLd = {

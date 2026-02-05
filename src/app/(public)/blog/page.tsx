@@ -15,7 +15,26 @@ export const metadata: Metadata = {
     title: "Blog — Kali Software",
     description:
         "Guides on HubSpot, Xero, workflow automation, and professional services automation for Australian businesses.",
+    alternates: {
+        canonical: "https://www.kalisoftware.io/blog",
+    },
+    openGraph: {
+        title: "Blog — Kali Software",
+        description:
+            "Guides on HubSpot, Xero, workflow automation, and professional services automation for Australian businesses.",
+        url: "https://www.kalisoftware.io/blog",
+        images: [{ url: "/images/og/image.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Blog — Kali Software",
+        description:
+            "Guides on HubSpot, Xero, workflow automation, and professional services automation for Australian businesses.",
+        images: ["/images/og/image.png"],
+    },
 };
+
+export const revalidate = 3600;
 
 type FM = {
     title?: string;

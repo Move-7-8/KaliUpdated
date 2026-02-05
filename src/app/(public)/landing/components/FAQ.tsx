@@ -13,6 +13,49 @@ export const FAQ = () => {
 
     const faqs: FAQItem[] = [
         {
+            q: "What AI services do you offer?",
+            a: (
+                <>
+                    We build production-ready AI systems including:
+                    <ul>
+                        <li>
+                            <strong>Multi-agent systems</strong> — orchestrating specialised agents for complex
+                            workflows like research, analysis, and validation.
+                        </li>
+                        <li>
+                            <strong>RAG & semantic search</strong> — connecting LLMs to your private documents and data
+                            with citations.
+                        </li>
+                        <li>
+                            <strong>LLM integration</strong> — prompt engineering, model selection, and deployment with
+                            proper guardrails.
+                        </li>
+                        <li>
+                            <strong>Evaluation frameworks</strong> — automated testing to catch issues before they reach
+                            production.
+                        </li>
+                    </ul>
+                    We focus on AI that works reliably in production, not just impressive demos.
+                </>
+            ),
+        },
+        {
+            q: "What is RAG and how can it help my business?",
+            a: "RAG (Retrieval-Augmented Generation) connects AI models to your private data—documents, databases, or APIs—so the AI can answer questions grounded in your specific context. This reduces hallucinations and means you get accurate, citable responses about your business rather than generic answers. It's particularly useful for internal knowledge bases, customer support, and research workflows.",
+        },
+        {
+            q: "How do you ensure AI systems are safe and reliable?",
+            a: (
+                <>
+                    We implement multiple layers: input validation and guardrails to filter problematic queries, output
+                    filtering to catch issues before they reach users, automated evaluation suites that run on every
+                    change, and human-in-the-loop review for sensitive actions. We also test specifically for prompt
+                    injection and data leakage vulnerabilities, and set up observability so you can monitor what the AI
+                    is actually doing in production.
+                </>
+            ),
+        },
+        {
             q: "Which systems can you integrate for businesses in Australia?",
             a: (
                 <>
@@ -173,8 +216,8 @@ export const FAQ = () => {
                     </div> */}
                     <h2 className="text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
                     <p className="text-base-content/70 inline-block max-w-lg font-sans">
-                        Questions Australian SMEs ask about <strong>data integration services</strong>, and{" "}
-                        <strong>analytics consulting</strong>.
+                        Questions Australian businesses ask about <strong>AI solutions</strong>,{" "}
+                        <strong>data integration</strong>, and <strong>analytics consulting</strong>.
                     </p>
                 </div>
 

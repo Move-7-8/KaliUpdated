@@ -269,7 +269,7 @@ export default function ContactModal({
                     <form method="dialog">
                         <button
                             type="submit"
-                            className="btn btn-sm btn-circle btn-ghost absolute top-3 right-3"
+                            className="btn btn-circle btn-ghost absolute top-3 right-3 min-h-[44px] min-w-[44px]"
                             aria-label="Close">
                             ✕
                         </button>
