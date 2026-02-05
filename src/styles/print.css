@@ -1,0 +1,96 @@
+/* Print stylesheet - optimizes pages for printing */
+@media print {
+    /* Hide navigation and interactive elements */
+    nav,
+    .navbar,
+    .topbar,
+    .drawer,
+    .modal,
+    .btn,
+    button,
+    footer,
+    .footer,
+    [data-scrolling],
+    .fixed {
+        display: none !important;
+    }
+
+    /* Reset backgrounds and colors for printing */
+    body,
+    main,
+    article,
+    section,
+    div {
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Ensure text is readable */
+    * {
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Improve link visibility */
+    a {
+        text-decoration: underline !important;
+    }
+
+    /* Show link URLs after link text for blog articles */
+    article a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666 !important;
+    }
+
+    /* Don't show URL for internal links or anchors */
+    article a[href^="#"]::after,
+    article a[href^="/"]::after {
+        content: "";
+    }
+
+    /* Avoid page breaks inside important elements */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    p,
+    blockquote,
+    pre,
+    code,
+    li {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Ensure proper margins */
+    @page {
+        margin: 2cm;
+    }
+
+    /* Blog-specific optimizations */
+    .prose {
+        max-width: 100% !important;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+    }
+
+    /* Hide marquee animations */
+    .marquee {
+        animation: none !important;
+        flex-wrap: wrap !important;
+    }
+}
